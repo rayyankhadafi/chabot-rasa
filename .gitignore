@@ -18,4 +18,3 @@ __pycache__
 
 # Rasa
 backend/.rasa/
-backend/models/
