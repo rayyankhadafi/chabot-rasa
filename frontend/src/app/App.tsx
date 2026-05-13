@@ -170,7 +170,7 @@ const [chats, setChats] = useState<Chat[]>([
           />
         </div>
 
-          <footer className="text-center text-xs text-muted-foreground py-3 border-t border-border">
+          <footer className="text-center text-xs text-muted-foreground py-3">
             © 2026 Chatbot Lab Informatika UAD • Developed by Rayyan
           </footer>
 
