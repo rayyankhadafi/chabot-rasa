@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+- rule: sapaan
+  steps:
+    - intent: menyapa
+    - action: utter_menyapa
+
+- rule: terima kasih
+  steps:
+    - intent: terimakasih
+    - action: utter_terimakasih
+
+- rule: sampai jumpa
+  steps:
+    - intent: sampai_jumpa
+    - action: utter_sampai_jumpa
+
+- rule: mood baik
+  steps:
+    - intent: mood_baik
+    - action: utter_mood_baik
+
+- rule: mood tidak baik
+  steps:
+    - intent: mood_tidak_baik
+    - action: utter_mood_tidak_baik
+
+- rule: identitas bot
+  steps:
+    - intent: tantangan_bot
+    - action: utter_tantangan_bot
+
+- rule: user menegaskan
+  steps:
+    - intent: menegaskan
+    - action: utter_menegaskan
+
+- rule: user membantah
+  steps:
+    - intent: membantah
+    - action: utter_membantah
+
+- rule: Jawaban tidak mengerti
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

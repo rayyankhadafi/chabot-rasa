@@ -1,0 +1,232 @@
+version: "3.1"
+
+nlu:
+
+# =========================
+# PENGERTIAN RESPONSI
+# =========================
+- intent: tanya_pengertian_responsi
+  examples: |
+    - Apa itu responsi?
+    - responsi adalah?
+    - Jelaskan pengertian responsi
+    - Apa yang dimaksud dengan responsi?
+    - Responsi itu apa ya?
+    - Apa fungsi responsi?
+    - Kegunaan responsi untuk apa?
+    - Responsi digunakan untuk apa?
+    - Apakah responsi termasuk ujian?
+    - Responsi praktikum itu apa?
+    - Apa tujuan diadakannya responsi?
+    - responsi itu ujian atau praktikum?
+    - resp itu apa?
+    - Apa arti responsi?
+    - responsi maksudnya apa?
+
+# =========================
+# BIAYA RESPONSI
+# =========================
+- intent: tanya_biaya_responsi
+  examples: |
+    - Apakah responsi bayar?
+    - Responsi bayar juga ngak?
+    - Apakah ada biaya responsi?
+    - responsi gratis atau bayar?
+    - Apakah perlu membayar untuk ikut responsi?
+    - Ada biaya tambahan untuk responsi?
+    - Berapa biaya responsi?
+    - apakah responsi dikenakan biaya?
+    - ikut responsi bayar tidak?
+    - apakah ada uang responsi?
+    - responsi perlu pembayaran?
+    - apakah responsi dipungut biaya?
+    - bayar responsi dimana?
+    - responsi harus bayar ya?
+    - apakah responsi berbayar?
+
+# =========================
+# NILAI RESPONSI
+# =========================
+- intent: tanya_nilai_responsi
+  examples: |
+    - Kenapa nilai responsi saya tidak sesuai?
+    - Apakah nilai responsi bisa diperbaiki?
+    - Apakah nilai responsi diubah jika tidak sesuai?
+    - Nilai minimal responsi berapa?
+    - Ketika sedang responsi namun komputer mengalami masalah apakah nilai responsi masih aman?
+    - Apakah nilai responsi sama dengan nilai mata kuliah?
+    - nilai responsi saya salah bagaimana?
+    - apakah nilai responsi bisa direvisi?
+    - bagaimana jika nilai responsi tidak keluar?
+    - kalau komputer error saat responsi apakah nilai hilang?
+    - nilai responsi bisa komplain tidak?
+    - bagaimana cara mengajukan revisi nilai responsi?
+    - apakah nilai responsi dapat diperbaiki?
+    - apakah responsi memiliki nilai minimum?
+    - nilai responsi saya belum masuk
+    - jika ada kesalahan nilai responsi harus bagaimana?
+    - apakah nilai responsi penting?
+    - apakah nilai responsi mempengaruhi nilai matkul?
+    - apakah nilai responsi bisa berubah?
+
+# =========================
+# JADWAL RESPONSI
+# =========================
+- intent: tanya_jadwal_responsi
+  examples: |
+    - kapan jadwal responsi?
+    - kapan responsi dilaksanakan?
+    - jadwal responsi kapan?
+    - responsi kapan?
+    - kapan ada responsi?
+    - jadwal responsi semester ini kapan?
+    - kapan responsi dilakukan?
+    - apakah jadwal responsi diumumkan jauh hari?
+    - kapan pelaksanaan responsi?
+    - responsi minggu ini kapan?
+    - kapan ujian responsi dimulai?
+    - apakah jadwal responsi bisa berubah?
+    - info jadwal responsi dimana?
+    - responsi diadakan kapan?
+    - jadwal responsi diumumkan dimana?
+    - responsi semester ini ada kapan saja?
+    - kapan resp dilaksanakan?
+    - jadwal responsi terbaru kapan?
+
+# =========================
+# MEKANISME RESPONSI
+# =========================
+- intent: tanya_mekanisme_responsi
+  examples: |
+    - mekanisme pelaksanaan responsinya bagaimana?
+    - Apakah responsi menggunakan komputer atau kertas tulis?
+    - Responsi apakah dilakukan secara kelompok atau individu?
+    - Format soal responsi seperti apa?
+    - Responsi apakah bisa ada inhall juga?
+    - Apakah responsi bisa dilakukan secara online?
+    - Apa saja ketentuan responsi online?
+    - Apakah ada kemungkinan responsi boleh membuka browser?
+    - Saat responsi apakah boleh bertanya ke teman jika ada masalah terkait alat labor?
+    - bagaimana alur responsi?
+    - apakah responsi dikerjakan sendiri?
+    - apakah responsi mempraktikan coding langsung?
+    - soal responsi bentuknya seperti apa?
+    - apakah responsi ada teori dan praktik?
+    - bagaimana teknis responsi online?
+    - apakah responsi menggunakan laptop pribadi?
+    - apakah responsi memakai komputer lab?
+    - apakah responsi boleh buka internet?
+    - apakah responsi ada pengawas?
+    - apakah responsi dilakukan secara offline?
+    - bagaimana proses responsi berlangsung?
+    - Bagaimana panduan responsi?
+    - Apa saja panduan responsi?
+    - Panduan responsi?
+    - Bagaimana cara mengikuti responsi?
+
+# =========================
+# KEHADIRAN RESPONSI
+# =========================
+- intent: tanya_kehadiran_responsi
+  examples: |
+    - Bagaimana jika tidak hadir responsi?
+    - Minimal kehadiran untuk mengikuti responsi berapa?
+    - Apakah responsi wajib?
+    - Apakah ada syarat minimal kehadiran untuk bisa ikut responsi?
+    - kalau tidak hadir responsi bagaimana?
+    - apakah boleh tidak ikut responsi?
+    - jika sakit saat responsi bagaimana?
+    - apakah kehadiran praktikum mempengaruhi responsi?
+    - apakah harus hadir semua praktikum untuk ikut responsi?
+    - apakah responsi wajib diikuti?
+    - jika izin apakah boleh tidak ikut responsi?
+    - apakah absen responsi bisa diganti?
+    - syarat kehadiran responsi berapa persen?
+    - apakah mahasiswa yang tidak hadir boleh ikut susulan?
+    - jika tidak masuk responsi apakah nilainya nol?
+    - apakah boleh izin tidak hadir responsi?
+    - kehadiran minimal responsi berapa?
+    - apakah responsi termasuk wajib hadir?
+
+# =========================
+# SANKSI RESPONSI
+# =========================
+- intent: tanya_sanksi_responsi
+  examples: |
+    - Apa sanksi ketika responsi jika ketahuan mencontek teman?
+    - Saat responsi ketika ada teman yang mencontek kita apakah bisa dilaporkan?
+    - Apa konsekuensi jika bertanya ke teman saat responsi?
+    - Kalau tidak ikut responsi apakah harus responsi ulang?
+    - Apakah ada denda jika telat responsi?
+    - apa hukuman jika mencontek saat responsi?
+    - apakah ada sanksi jika terlambat responsi?
+    - konsekuensi tidak hadir responsi apa?
+    - apakah nilai bisa nol jika curang saat responsi?
+    - jika melanggar aturan responsi hukumannya apa?
+    - apakah mencontek saat responsi langsung gagal?
+    - apakah mahasiswa yang curang akan dilaporkan?
+    - apakah boleh membantu teman saat responsi?
+    - sanksi pelanggaran responsi apa saja?
+    - apa akibat terlambat masuk saat responsi?
+    - kalau ketahuan buka browser saat responsi bagaimana?
+    - apakah ada punishment saat responsi?
+    - jika melanggar tata tertib responsi apa akibatnya?
+    - apakah bisa mendapat pengurangan nilai?
+    - apa konsekuensi kecurangan saat responsi?
+
+# =========================
+# SUSULAN RESPONSI
+# =========================
+- intent: tanya_susulan_responsi
+  examples: |
+    - Apakah bisa susulan responsi?
+    - Apakah ada responsi susulan?
+    - Apakah boleh izin tidak mengikuti responsi ketika mendapat musibah?
+    - Tidak hadir responsi bisa diganti?
+    - apakah responsi susulan tersedia?
+    - bagaimana cara mengikuti responsi susulan?
+    - apakah mahasiswa sakit bisa ikut susulan?
+    - jika izin apakah bisa responsi di hari lain?
+    - apakah ada jadwal pengganti responsi?
+    - responsi susulan dilakukan kapan?
+    - siapa saja yang boleh ikut responsi susulan?
+    - bagaimana prosedur responsi susulan?
+    - apakah perlu surat izin untuk susulan?
+    - jika berhalangan apakah bisa ikut susulan?
+    - apakah responsi ulang diperbolehkan?
+    - kalau tidak hadir apakah ada kesempatan kedua?
+    - bagaimana cara mengajukan responsi susulan?
+    - apakah responsi bisa diulang?
+    - izin tidak masuk responsi apakah dapat susulan?
+    - apakah musibah bisa mendapat responsi susulan?
+
+# =========================
+# ATURAN RESPONSI
+# =========================
+- intent: tanya_aturan_responsi
+  examples: |
+    - Apakah boleh telat responsi?
+    - Ketika responsi apakah boleh membawa catatan praktikum?
+    - Ketika responsi apa saja yang tidak boleh dibawa ketika masuk ke dalam labor?
+    - Apa saja aturan ketika responsi berlangsung?
+    - Saat responsi apakah ada batas waktu telat masuk labnya?
+    - Boleh ngak membawa hp ketika responsi?
+    - apakah boleh membawa buku saat responsi?
+    - aturan responsi apa saja?
+    - tata tertib responsi bagaimana?
+    - apakah boleh membawa tas ke labor saat responsi?
+    - apakah hp harus dimatikan saat responsi?
+    - apakah boleh makan dan minum saat responsi?
+    - apakah boleh keluar ruangan saat responsi?
+    - apakah boleh membuka internet saat responsi?
+    - barang apa saja yang dilarang saat responsi?
+    - apakah catatan diperbolehkan saat responsi?
+    - apakah boleh membawa laptop pribadi?
+    - apakah ada aturan pakaian saat responsi?
+    - apakah boleh terlambat masuk responsi?
+    - apa saja larangan saat responsi?
+    - apakah mahasiswa wajib mematuhi tata tertib labor?
+    - saat responsi apakah boleh menggunakan headset?
+    - apakah boleh meminjam alat teman saat responsi?
+    - aturan masuk labor saat responsi bagaimana?
+    - apakah boleh membawa hp ke dalam labor?

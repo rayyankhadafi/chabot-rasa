@@ -1,0 +1,121 @@
+version: "3.1"
+
+intents:
+  - tanya_nilai_responsi
+  - tanya_jadwal_responsi
+  - tanya_mekanisme_responsi
+  - tanya_kehadiran_responsi
+  - tanya_sanksi_responsi
+  - tanya_susulan_responsi
+  - tanya_aturan_responsi
+  - tanya_pengertian_responsi
+  - tanya_biaya_responsi
+  - tanya_inhal_praktikum
+  - tanya_jadwal_praktikum
+  - tanya_kehadiran_praktikum
+  - tanya_nilai_praktikum
+  - tanya_aturan_praktikum
+  - tanya_peralatan_praktikum
+  - tanya_online_praktikum
+  - tanya_pendaftaran_praktikum
+  - tanya_peminjaman_lab
+  - tanya_kelulusan_praktikum
+  - menyapa
+  - sampai_jumpa
+  - terimakasih
+  - menegaskan
+  - membantah
+  - tantangan_bot
+  - mood_baik
+  - mood_tidak_baik
+entities:
+  - topik
+actions:
+  - action_handle_responsi
+  - action_handle_praktikum
+  - action_handle_pendaftaran
+
+responses:
+
+  # =========================================================
+  # ======================= SAPAAN ==========================
+  # =========================================================
+
+  utter_menyapa:
+    - text: "Halo 👋, ada yang bisa saya bantu terkait praktikum atau responsi?"
+    - text: "Hai 😊, silakan tanyakan informasi seputar laboratorium, praktikum, atau responsi."
+    - text: "Selamat datang 🙌, saya siap membantu menjawab pertanyaan Anda."
+
+  # =========================================================
+  # ===================== SAMPAI JUMPA ======================
+  # =========================================================
+
+  utter_sampai_jumpa:
+    - text: "Sampai jumpa 👋, semoga harimu menyenangkan."
+    - text: "Baik, sampai bertemu lagi 😊."
+    - text: "Terima kasih sudah menggunakan chatbot ini 👋."
+
+  # =========================================================
+  # ===================== TERIMA KASIH ======================
+  # =========================================================
+
+  utter_terimakasih:
+    - text: "Sama-sama 😊, senang bisa membantu."
+    - text: "Terima kasih kembali 🙌."
+    - text: "Dengan senang hati 😊."
+
+  # =========================================================
+  # ======================= MENEGASKAN ======================
+  # =========================================================
+
+  utter_menegaskan:
+    - text: "Baik 👍."
+    - text: "Oke, saya mengerti 😊."
+    - text: "Siap, terima kasih atas konfirmasinya."
+
+  # =========================================================
+  # ======================= MEMBANTAH =======================
+  # =========================================================
+
+  utter_membantah:
+    - text: "Baik, silakan jelaskan kembali pertanyaan Anda 😊."
+    - text: "Oke, saya akan mencoba memahami lagi."
+    - text: "Mohon maaf jika ada kesalahan pemahaman."
+
+  # =========================================================
+  # ======================= MOOD BAIK =======================
+  # =========================================================
+
+  utter_mood_baik:
+    - text: "Senang mendengarnya 😊."
+    - text: "Wah bagus sekali 👍."
+    - text: "Semoga harimu terus menyenangkan ✨."
+
+  # =========================================================
+  # ==================== MOOD TIDAK BAIK ====================
+  # =========================================================
+
+  utter_mood_tidak_baik:
+    - text: "Semoga keadaanmu segera membaik 😊."
+    - text: "Tetap semangat ya 🙌."
+    - text: "Semoga harimu menjadi lebih baik ✨."
+
+  # =========================================================
+  # ===================== IDENTITAS BOT =====================
+  # =========================================================
+
+  utter_tantangan_bot:
+    - text: "Saya adalah chatbot berbasis AI yang dibuat untuk membantu menjawab pertanyaan seputar laboratorium, praktikum, dan responsi Informatika UAD."
+    - text: "Saya chatbot virtual 😊 yang siap membantu memberikan informasi terkait praktikum dan laboratorium."
+    - text: "Saya bukan manusia, tetapi saya siap membantu menjawab pertanyaan Anda 🙌."
+
+  # =========================================================
+  # ======================== DEFAULT ========================
+  # =========================================================
+
+  utter_default:
+    - text: "Maaf, saya belum memahami pertanyaan Anda. Silakan coba gunakan kata lain."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

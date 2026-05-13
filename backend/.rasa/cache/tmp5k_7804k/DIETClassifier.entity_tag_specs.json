@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-subtopik",
+      "2": "I-subtopik",
+      "3": "L-subtopik",
+      "4": "U-subtopik",
+      "5": "B-topik",
+      "6": "I-topik",
+      "7": "L-topik",
+      "8": "U-topik",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-subtopik": 1,
+      "I-subtopik": 2,
+      "L-subtopik": 3,
+      "U-subtopik": 4,
+      "B-topik": 5,
+      "I-topik": 6,
+      "L-topik": 7,
+      "U-topik": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

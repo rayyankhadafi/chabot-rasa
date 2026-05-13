@@ -1,0 +1,55 @@
+version: "3.1"
+
+rules:
+
+# ========== Praktikum ==========
+
+- rule: handle inhal praktikum
+  steps:
+    - intent: tanya_inhal_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle jadwal praktikum
+  steps:
+    - intent: tanya_jadwal_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle aturan praktikum
+  steps:
+    - intent: tanya_aturan_praktikum
+    - action: action_handle_praktikum
+    
+- rule: handle kehadiran praktikum
+  steps:
+    - intent: tanya_kehadiran_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle nilai praktikum
+  steps:
+    - intent: tanya_nilai_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle peralatan praktikum
+  steps:
+    - intent: tanya_peralatan_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle online praktikum
+  steps:
+    - intent: tanya_online_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle pendaftaran praktikum
+  steps:
+    - intent: tanya_pendaftaran_praktikum
+    - action: action_handle_praktikum
+
+- rule: handle peminjaman lab
+  steps:
+    - intent: tanya_peminjaman_lab
+    - action: action_handle_praktikum
+
+- rule: handle kelulusan praktikum
+  steps:
+    - intent: tanya_kelulusan_praktikum
+    - action: action_handle_praktikum

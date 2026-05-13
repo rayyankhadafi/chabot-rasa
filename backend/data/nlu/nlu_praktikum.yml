@@ -1,0 +1,158 @@
+version: "3.1"
+
+nlu:
+
+# =========================
+# INHAL PRAKTIKUM
+# =========================
+- intent: tanya_inhal_praktikum
+  examples: |
+    - Bagaimana cara mengikuti inhal?
+    - Bagaimana cara membayar inhal?
+    - Apakah bisa susulan jika tidak hadir praktikum?
+    - Jika tidak hadir praktikum karena sakit apakah tetap membayar inhal?
+    - Bagaimana jika tidak hadir praktikum karena ada musibah?
+    - Jika absensi praktikum melebihi batas apakah masih bisa diperbaiki?
+    - Bagaimana jika saya tidak hadir karena lupa praktikum?
+    - Jika tidak hadir praktikum sampai melebihi batas hadir apa konsekuensinya?
+
+# =========================
+# JADWAL PRAKTIKUM
+# =========================
+- intent: tanya_jadwal_praktikum
+  examples: |
+    - Bisa pindah jadwal?
+    - Bagaimana jika bentrok jadwal praktikum?
+    - Dimana saya bisa melihat jadwal praktikum terbaru?
+    - Kapan jadwal praktikum diumumkan?
+    - Bagaimana cara mengganti jadwal praktikum?
+    - Apakah jadwal praktikum bisa diubah?
+    - Bagaimana jika jadwal praktikum bentrok dengan kuliah?
+    - Jadwal praktikum bisa dilihat dimana?
+    - Kapan praktikum dimulai?
+
+# =========================
+# ATURAN PRAKTIKUM
+# =========================
+- intent: tanya_aturan_praktikum
+  examples: |
+    - Ketika praktikum boleh bawa hp ngak?
+    - Apakah ketika praktikum boleh membuka browser?
+    - Apakah ketika praktikum boleh bekerja sama dengan teman?
+    - Apakah boleh membuka internet saat praktikum?
+    - Apakah boleh menggunakan ChatGPT saat praktikum?
+    - Bagaimana aturan praktikum di laboratorium?
+    - Apa saja tata tertib praktikum?
+    - Apakah praktikum harus dikerjakan sendiri?
+    - Apakah boleh membawa hp saat praktikum?
+    - Bolehkah kerja kelompok saat praktikum?
+    - Apa aturan ketika praktikum berlangsung?
+
+# =========================
+# KEHADIRAN PRAKTIKUM
+# =========================
+- intent: tanya_kehadiran_praktikum
+  examples: |
+    - Minimal kehadiran praktikum berapa?
+    - Apakah wajib ikut semua pertemuan praktikum?
+    - Bagaimana aturan jika tidak hadir praktikum tanpa keterangan?
+    - Jika telat karena ada masalah ketika di perjalanan apakah tetap boleh masuk?
+    - Bagaimana cara mengurus izin tidak hadir praktikum?
+    - Jika tidak hadir praktikum apakah boleh susulan?
+    - Apakah kehadiran mempengaruhi nilai praktikum?
+    - Kalau telat apakah dihitung alfa?
+    - Apakah boleh telat praktikum?
+    - Apakah ada batas waktu telat ketika praktikum?
+    - Jika telat apakah dihitung alfa?
+
+# =========================
+# NILAI PRAKTIKUM
+# =========================
+- intent: tanya_nilai_praktikum
+  examples: |
+    - Bagaimana sistem penilaian praktikum?
+    - Apakah nilai bisa dirubah ketika asisten salah memberikan nilai praktikum?
+    - Bagaimana cara mengurus terkait penilaian jika ingin mengganti jadwal pada praktikum?
+    - Bagaimana cara mengurus nilai jika ingin mengganti jadwal praktikum?
+    - Bagaimana jika nilai matkul rendah namun nilai praktikum tinggi?
+    - Berapa persen nilai praktikum untuk menambah nilai matkul?
+    - Apakah nilai praktikum mempengaruhi nilai responsi?
+    - Jika nilai praktikum salah bagaimana?
+    - Apakah nilai praktikum bisa direvisi?
+
+# =========================
+# PERALATAN PRAKTIKUM
+# =========================
+- intent: tanya_peralatan_praktikum
+  examples: |
+    - Perlu bawa modul ngak ketika praktikum?
+    - Apakah perlu laptop sendiri?
+    - Bisa ngak saya membawa laptop ke lab?
+    - Apakah wajib membawa modul?
+    - Apakah boleh membawa catatan praktikum?
+    - Praktikum harus membawa laptop sendiri?
+
+# =========================
+# ONLINE PRAKTIKUM
+# =========================
+- intent: tanya_online_praktikum
+  examples: |
+    - Apakah ada praktikum yang online?
+    - Semua praktikum apakah dilakukan offline?
+    - Ketika praktikum apakah boleh buka AI?
+    - Apa aja aturan ketika melakukan praktikum secara online?
+    - Bagaimana solusi jika internet bermasalah pada praktikum?
+    - Praktikum online menggunakan apa?
+    - Apakah praktikum boleh menggunakan ChatGPT?
+
+# =========================
+# PENDAFTARAN PRAKTIKUM
+# =========================
+- intent: tanya_pendaftaran_praktikum
+  examples: |
+    - Bagaimana tahapan mendaftar praktikum?
+    - Bagaimana cara daftar praktikum?
+    - Kapan pendaftaran praktikum dibuka?
+    - Bagaimana prosedur mengikuti praktikum?
+    - Dimana daftar praktikum?
+    - Bagaimana cara mengambil praktikum?
+    - Bagaimana jika telat mendaftar praktikum?
+    - Kapan waktu pendaftaran praktikum?
+    - Bagaimana prosedur pendaftaran praktikum untuk mahasiswa baru?
+    - Apa syarat ikut praktikum?
+    - Apakah kuota pendaftaran praktikum terbatas?
+    - Apa saja syarat administrasi mengikuti praktikum di awal semester?
+    - Apakah bisa memilih ulang ketika jadwal slot praktikum sudah habis?
+    - Apa saja yang harus dipersiapkan untuk mendaftar praktikum?
+    - Kenapa pendaftaran mata kuliah praktikum bayar?
+    - Dimana tempat untuk mendaftar praktikum?
+    - Bisa daftar praktikum telat?
+    - Kapan batas akhir pendaftaran praktikum biasanya ditutup?
+    - Link pendaftaran praktikum di mana?
+    - Kalau telat daftar apakah masih bisa ikut?
+    - Kapan buka pendaftaran praktikum?
+    - Cara daftar praktikum lewat mana?
+    - Bagaimana prosedur terkait pendaftaran praktikum jika terlambat?
+
+# =========================
+# LAB DAN PEMINJAMAN
+# =========================
+- intent: tanya_peminjaman_lab
+  examples: |
+    - Bagaimana prosedur jika ingin meminjam alat lab?
+    - Jika alat yang digunakan rusak saat praktikum berlangsung bukan karena kelalaian praktikan bagaimana?
+    - Apakah boleh meminjam alat laboratorium?
+    - Bagaimana aturan peminjaman alat lab?
+    - Siapa yang bertanggung jawab jika alat rusak?
+
+# =========================
+# KELULUSAN PRAKTIKUM
+# =========================
+- intent: tanya_kelulusan_praktikum
+  examples: |
+    - Apakah harus lulus matkul untuk lulus praktikum?
+    - Ketika matkul tidak lulus apakah praktikum juga tidak lulus?
+    - Apakah praktikum dan matkul saling mempengaruhi?
+    - Bagaimana syarat lulus praktikum?
+    - Apakah nilai praktikum terpisah dari matkul?
+    - Apakah bisa mengulang praktikum?

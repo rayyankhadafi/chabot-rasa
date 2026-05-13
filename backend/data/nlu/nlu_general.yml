@@ -1,0 +1,159 @@
+version: "3.1"
+
+nlu:
+
+# =========================================================
+# ======================= SAPAAN ==========================
+# =========================================================
+
+- intent: menyapa
+  examples: |
+    - halo
+    - hai
+    - hi
+    - hallo
+    - assalamualaikum
+    - selamat pagi
+    - selamat siang
+    - selamat sore
+    - selamat malam
+    - halo chatbot
+    - hai bot
+    - permisi
+    - halo ada yang bisa bantu?
+    - hai apakah kamu aktif?
+
+# =========================================================
+# ===================== SAMPAI JUMPA ======================
+# =========================================================
+
+- intent: sampai_jumpa
+  examples: |
+    - sampai jumpa
+    - sampai bertemu lagi
+    - sampai ketemu lagi
+    - dadah
+    - bye
+    - bye bye
+    - selamat tinggal
+    - saya pergi dulu
+    - saya keluar dulu
+    - terima kasih sampai jumpa
+    - oke sampai jumpa
+    - sampai nanti
+
+# =========================================================
+# ===================== TERIMA KASIH ======================
+# =========================================================
+
+- intent: terimakasih
+  examples: |
+    - terima kasih
+    - terima kasih banyak
+    - makasih
+    - makasih banyak
+    - terimakasih ya
+    - terima kasih ya
+    - makasih ya
+    - sangat membantu
+    - bantuannya sangat membantu
+    - oke terima kasih
+    - siap terima kasih
+
+# =========================================================
+# ======================= MENEGASKAN ======================
+# =========================================================
+
+- intent: menegaskan
+  examples: |
+    - ya
+    - iya
+    - benar
+    - betul
+    - tentu
+    - tentu saja
+    - ya benar
+    - benar sekali
+    - iya betul
+    - sepertinya benar
+    - saya setuju
+    - oke benar
+
+# =========================================================
+# ======================= MEMBANTAH =======================
+# =========================================================
+
+- intent: membantah
+  examples: |
+    - tidak
+    - enggak
+    - gak
+    - bukan
+    - tidak benar
+    - saya rasa tidak
+    - kayaknya tidak
+    - tidak seperti itu
+    - bukan itu maksud saya
+    - tidak sekarang
+    - belum
+    - belum benar
+
+# =========================================================
+# ======================= MOOD BAIK =======================
+# =========================================================
+
+- intent: mood_baik
+  examples: |
+    - saya senang
+    - saya baik
+    - sangat baik
+    - bagus
+    - bagus sekali
+    - keren banget
+    - saya bahagia
+    - saya bersemangat
+    - hari ini menyenangkan
+    - luar biasa
+    - mantap
+    - saya sangat senang
+    - saya baik baik saja
+
+# =========================================================
+# ==================== MOOD TIDAK BAIK ====================
+# =========================================================
+
+- intent: mood_tidak_baik
+  examples: |
+    - saya sedih
+    - saya kecewa
+    - tidak baik
+    - kurang baik
+    - sangat sedih
+    - saya capek
+    - saya lelah
+    - saya tidak semangat
+    - hari ini buruk
+    - saya bingung
+    - saya stres
+    - saya tidak baik baik saja
+    - sangat tidak menyenangkan
+
+# =========================================================
+# ===================== IDENTITAS BOT =====================
+# =========================================================
+
+- intent: tantangan_bot
+  examples: |
+    - apakah kamu bot?
+    - apakah kamu manusia?
+    - apakah saya berbicara dengan bot?
+    - apakah saya berbicara dengan manusia?
+    - siapa kamu?
+    - kamu siapa?
+    - apakah kamu chatbot?
+    - kamu asli gak?
+    - apakah ini chatbot?
+    - apakah ini AI?
+    - siapa yang membuat kamu?
+    - kamu robot?
+    - kamu manusia atau bot?

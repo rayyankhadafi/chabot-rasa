@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+# ========== Responsi ==========
+- rule: handle pertanyaan responsi
+  steps:
+    - intent: tanya_nilai_responsi
+    - action: action_handle_responsi
+
+- rule: handle jadwal responsi
+  steps:
+    - intent: tanya_jadwal_responsi
+    - action: action_handle_responsi
+
+- rule: handle mekanisme responsi
+  steps:
+    - intent: tanya_mekanisme_responsi
+    - action: action_handle_responsi
+
+- rule: handle kehadiran responsi
+  steps:
+    - intent: tanya_kehadiran_responsi
+    - action: action_handle_responsi
+
+- rule: handle sanksi responsi
+  steps:
+    - intent: tanya_sanksi_responsi
+    - action: action_handle_responsi
+
+- rule: handle susulan responsi
+  steps:
+    - intent: tanya_susulan_responsi
+    - action: action_handle_responsi
+
+- rule: handle aturan responsi
+  steps:
+    - intent: tanya_aturan_responsi
+    - action: action_handle_responsi
+
+- rule: handle pengertian responsi
+  steps:
+    - intent: tanya_pengertian_responsi
+    - action: action_handle_responsi
+
+- rule: handle biaya responsi
+  steps:
+    - intent: tanya_biaya_responsi
+    - action: action_handle_responsi
