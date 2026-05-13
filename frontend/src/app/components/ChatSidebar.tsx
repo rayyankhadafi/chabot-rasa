@@ -164,10 +164,10 @@ export function ChatSidebar({
   ) => {
 
     const updatedChats =
-      chatHistory.filter(
-        (chat) => chat.id !== chatId
-      );
-
+      chatHistory.filter((chat) => {
+        return chat.id !== chatId;
+      });
+      
     setChatHistory(updatedChats);
 
     // pindah active chat
