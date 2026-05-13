@@ -648,68 +648,68 @@ class ActionHandlePraktikum(Action):
 
     # ================= RUN =================
 
-def run(
-    self,
-    dispatcher: CollectingDispatcher,
-    tracker: Tracker,
-    domain: Dict[Text, Any]
-) -> List[Dict[Text, Any]]:
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
 
-    try:
+        try:
 
-        intent = tracker.latest_message.get(
-            "intent", {}
-        ).get("name")
+            intent = tracker.latest_message.get(
+                "intent", {}
+            ).get("name")
 
-        text = tracker.latest_message.get(
-            "text", ""
-        ).strip().lower()
+            text = tracker.latest_message.get(
+                "text", ""
+            ).strip().lower()
 
-        # Jangan proses jika kosong
-        if not text:
-            return []
+            # Jangan proses jika kosong
+            if not text:
+                return []
 
-        if intent == "tanya_inhal_praktikum":
-            self.handle_inhal(dispatcher, text)
-        
-        elif intent == "tanya_jadwal_praktikum":
-            self.handle_jadwal(dispatcher, text)
-        
-        elif intent == "tanya_aturan_praktikum":
-            self.handle_aturan(dispatcher, text)
+            if intent == "tanya_inhal_praktikum":
+                self.handle_inhal(dispatcher, text)
+            
+            elif intent == "tanya_jadwal_praktikum":
+                self.handle_jadwal(dispatcher, text)
+            
+            elif intent == "tanya_aturan_praktikum":
+                self.handle_aturan(dispatcher, text)
 
-        elif intent == "tanya_kehadiran_praktikum":
-            self.handle_kehadiran(dispatcher, text)
+            elif intent == "tanya_kehadiran_praktikum":
+                self.handle_kehadiran(dispatcher, text)
 
-        elif intent == "tanya_nilai_praktikum":
-            self.handle_nilai(dispatcher, text)
+            elif intent == "tanya_nilai_praktikum":
+                self.handle_nilai(dispatcher, text)
 
-        elif intent == "tanya_peralatan_praktikum":
-            self.handle_peralatan(dispatcher, text)
+            elif intent == "tanya_peralatan_praktikum":
+                self.handle_peralatan(dispatcher, text)
 
-        elif intent == "tanya_online_praktikum":
-            self.handle_online(dispatcher, text)
+            elif intent == "tanya_online_praktikum":
+                self.handle_online(dispatcher, text)
 
-        elif intent == "tanya_pendaftaran_praktikum":
-            self.handle_pendaftaran(dispatcher, text)
+            elif intent == "tanya_pendaftaran_praktikum":
+                self.handle_pendaftaran(dispatcher, text)
 
-        elif intent == "tanya_peminjaman_lab":
-            self.handle_lab(dispatcher, text)
+            elif intent == "tanya_peminjaman_lab":
+                self.handle_lab(dispatcher, text)
 
-        elif intent == "tanya_kelulusan_praktikum":
-            self.handle_kelulusan(dispatcher, text)
+            elif intent == "tanya_kelulusan_praktikum":
+                self.handle_kelulusan(dispatcher, text)
 
-        else:
+            else:
+                dispatcher.utter_message(
+                    text=clean_response(RESPONSES["default"])
+                )
+
+        except Exception as e:
+
             dispatcher.utter_message(
-                text=clean_response(RESPONSES["default"])
+                text=f"Error praktikum: {str(e)}"
             )
 
-    except Exception as e:
+            print(f"ERROR ACTION PRAKTIKUM: {e}")
 
-        dispatcher.utter_message(
-            text=f"Error praktikum: {str(e)}"
-        )
-
-        print(f"ERROR ACTION PRAKTIKUM: {e}")
-
-    return []
+        return []

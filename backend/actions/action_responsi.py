@@ -515,64 +515,64 @@ class ActionHandleResponsi(Action):
 
     # ================= RUN =================
 
-def run(
-    self,
-    dispatcher: CollectingDispatcher,
-    tracker: Tracker,
-    domain: Dict[Text, Any]
-) -> List[Dict[Text, Any]]:
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
 
-    try:
+        try:
 
-        intent = tracker.latest_message.get(
-            "intent", {}
-        ).get("name")
+            intent = tracker.latest_message.get(
+                "intent", {}
+            ).get("name")
 
-        text = tracker.latest_message.get(
-            "text", ""
-        ).strip().lower()
+            text = tracker.latest_message.get(
+                "text", ""
+            ).strip().lower()
 
-        if not text:
-            return []
+            if not text:
+                return []
 
-        if intent == "tanya_nilai_responsi":
-            self.handle_nilai(dispatcher, text)
+            if intent == "tanya_nilai_responsi":
+                self.handle_nilai(dispatcher, text)
 
-        elif intent == "tanya_jadwal_responsi":
-            self.handle_jadwal(dispatcher, text)
+            elif intent == "tanya_jadwal_responsi":
+                self.handle_jadwal(dispatcher, text)
 
-        elif intent == "tanya_mekanisme_responsi":
-            self.handle_mekanisme(dispatcher, text)
+            elif intent == "tanya_mekanisme_responsi":
+                self.handle_mekanisme(dispatcher, text)
 
-        elif intent == "tanya_kehadiran_responsi":
-            self.handle_kehadiran(dispatcher, text)
+            elif intent == "tanya_kehadiran_responsi":
+                self.handle_kehadiran(dispatcher, text)
 
-        elif intent == "tanya_sanksi_responsi":
-            self.handle_sanksi(dispatcher, text)
+            elif intent == "tanya_sanksi_responsi":
+                self.handle_sanksi(dispatcher, text)
 
-        elif intent == "tanya_susulan_responsi":
-            self.handle_susulan(dispatcher, text)
+            elif intent == "tanya_susulan_responsi":
+                self.handle_susulan(dispatcher, text)
 
-        elif intent == "tanya_aturan_responsi":
-            self.handle_aturan(dispatcher, text)
+            elif intent == "tanya_aturan_responsi":
+                self.handle_aturan(dispatcher, text)
 
-        elif intent == "tanya_pengertian_responsi":
-            self.handle_pengertian(dispatcher, text)
+            elif intent == "tanya_pengertian_responsi":
+                self.handle_pengertian(dispatcher, text)
 
-        elif intent == "tanya_biaya_responsi":
-            self.handle_biaya(dispatcher, text)
+            elif intent == "tanya_biaya_responsi":
+                self.handle_biaya(dispatcher, text)
 
-        else:
+            else:
+                dispatcher.utter_message(
+                    text=clean_response(RESPONSES["default"])
+                )
+
+        except Exception as e:
+
             dispatcher.utter_message(
-                text=clean_response(RESPONSES["default"])
+                text=f"Error action: {str(e)}"
             )
 
-    except Exception as e:
+            print(f"ERROR ACTION RESPONSI: {e}")
 
-        dispatcher.utter_message(
-            text=f"Error action: {str(e)}"
-        )
-
-        print(f"ERROR ACTION RESPONSI: {e}")
-
-    return []
+        return []
