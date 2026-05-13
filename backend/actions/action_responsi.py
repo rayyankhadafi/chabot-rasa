@@ -515,12 +515,14 @@ class ActionHandleResponsi(Action):
 
     # ================= RUN =================
 
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
+def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any]
+) -> List[Dict[Text, Any]]:
+
+    try:
 
         intent = tracker.latest_message.get(
             "intent", {}
@@ -530,7 +532,6 @@ class ActionHandleResponsi(Action):
             "text", ""
         ).strip().lower()
 
-        # Jangan proses jika kosong
         if not text:
             return []
 
@@ -566,4 +567,12 @@ class ActionHandleResponsi(Action):
                 text=clean_response(RESPONSES["default"])
             )
 
-        return []
+    except Exception as e:
+
+        dispatcher.utter_message(
+            text=f"Error action: {str(e)}"
+        )
+
+        print(f"ERROR ACTION RESPONSI: {e}")
+
+    return []
