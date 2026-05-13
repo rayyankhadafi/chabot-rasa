@@ -394,11 +394,6 @@ export function ChatSidebar({
                   {/* MENU */}
                   <div
                     className="relative shrink-0 ml-1"
-                      ref={
-                        openMenuId === chat.id
-                          ? menuRef
-                          : null
-                      }
                     >
 
                     <button
@@ -432,7 +427,12 @@ export function ChatSidebar({
                     {/* DROPDOWN */}
                     {openMenuId === chat.id && (
 
-                      <div className="
+                      <div 
+                        ref={menuRef}
+                          onClick={(e) =>
+                            e.stopPropagation()
+                          }
+                      className="
                         absolute
                         right-0
                         top-7
