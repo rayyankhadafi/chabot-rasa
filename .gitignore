@@ -15,3 +15,6 @@ __pycache__
 
 # VSCode
 .vscode
+
+.rasa_cache
+backend/.rasa_cache
