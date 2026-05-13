@@ -1,3 +1,4 @@
 rasa==3.6.21
 rasa-sdk==3.6.2
 aiogram==2.15
+uvloop==0.17.0
