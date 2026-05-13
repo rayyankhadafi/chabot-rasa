@@ -217,7 +217,7 @@ export function ChatSidebar({
 
     <div
       className={`fixed md:relative z-50 top-0 left-0 w-[95vw] max-w-80 bg-sidebar border-r border-sidebar-border h-dvh shrink-0 flex flex-col 
-        overflow-hidden min-h-0 shadow-sm" transition-transform duration-300
+        overflow-hidden min-h-0 shadow-sm transition-transform duration-300
         ${
           sidebarOpen
             ? 'translate-x-0'
