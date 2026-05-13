@@ -16,5 +16,6 @@ __pycache__
 # VSCode
 .vscode
 
-.rasa_cache
-backend/.rasa_cache
+# Rasa
+backend/.rasa/
+backend/models/
