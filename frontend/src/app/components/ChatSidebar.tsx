@@ -167,7 +167,7 @@ export function ChatSidebar({
       chatHistory.filter((chat) => {
         return chat.id !== chatId;
       });
-      
+
     setChatHistory(updatedChats);
 
     // pindah active chat
@@ -301,7 +301,8 @@ export function ChatSidebar({
           <div className="space-y-1">
 
             {chatHistory.map((chat) => (
-
+              
+              
               <div
                 key={chat.id}
                 onClick={() =>
@@ -393,7 +394,6 @@ export function ChatSidebar({
                   {/* MENU */}
                   <div
                     className="relative shrink-0 ml-1"
-                    ref={menuRef}
                   >
 
                     <button
