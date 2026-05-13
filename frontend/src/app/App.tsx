@@ -64,6 +64,25 @@ const [chats, setChats] = useState<Chat[]>([
     document.documentElement.classList.add('dark');
   }, []);
 
+    // Restore login session
+  useEffect(() => {
+
+    const savedUser =
+      localStorage.getItem('user');
+
+    if (savedUser) {
+
+      const user =
+        JSON.parse(savedUser);
+
+      setUserEmail(user.email);
+
+      setIsLoggedIn(true);
+
+    }
+
+  }, []);
+
   const handleLogin = (email: string) => {
     setUserEmail(email);
 
