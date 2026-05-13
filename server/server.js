@@ -31,15 +31,13 @@ app.get("/webhook", (req, res) => {
   const challenge = req.query["hub.challenge"];
 
   if (mode && token === VERIFY_TOKEN) {
-    ```
-console.log("WEBHOOK VERIFIED");
+  console.log("WEBHOOK VERIFIED");
 
-return res.status(200).send(challenge);
-```;
-  }
+  return res.status(200).send(challenge);
+    }
 
-  return res.sendStatus(403);
-});
+    return res.sendStatus(403);
+  });
 
 const PORT = process.env.PORT || 8000;
 
