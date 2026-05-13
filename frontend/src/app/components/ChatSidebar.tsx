@@ -394,13 +394,16 @@ export function ChatSidebar({
                   {/* MENU */}
                   <div
                     className="relative shrink-0 ml-1"
-                  >
+                      ref={
+                        openMenuId === chat.id
+                          ? menuRef
+                          : null
+                      }
+                    >
 
                     <button
                       onClick={(e) => {
-
                         e.stopPropagation();
-
                         setOpenMenuId(
                           openMenuId === chat.id
                             ? null
