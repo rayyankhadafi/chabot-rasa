@@ -8,6 +8,14 @@ import {
   Pencil
 } from 'lucide-react';
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
+
 import { Button } from './ui/button';
 import { ScrollArea } from './ui/scroll-area';
 
@@ -78,6 +86,9 @@ export function ChatSidebar({
   setSidebarOpen,
 
 }: ChatSidebarProps) {
+
+  const [showLogoutConfirm, setShowLogoutConfirm] =
+  useState(false);
 
   const [openMenuId, setOpenMenuId] =
     useState<string | null>(null);
@@ -572,7 +583,7 @@ export function ChatSidebar({
             transition-all
             cursor-pointer
           "
-          onClick={onLogout}
+          onClick={() => setShowLogoutConfirm(true)}
         >
 
           <LogOut className="mr-2.5 h-3.5 w-3.5" />
@@ -582,7 +593,48 @@ export function ChatSidebar({
         </Button>
 
       </div>
+        <Dialog
+          open={showLogoutConfirm}
+          onOpenChange={setShowLogoutConfirm}>
+        <DialogContent className="sm:max-w-md">
 
+          <DialogHeader>
+            <DialogTitle>
+              Konfirmasi Logout
+            </DialogTitle>
+
+            <DialogDescription>
+              Apakah Anda yakin ingin keluar?
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="flex justify-end gap-2 pt-4">
+
+            <Button
+              variant="outline"
+              onClick={() =>
+                setShowLogoutConfirm(false)
+              }
+            >
+              Batal
+            </Button>
+
+            <Button
+              variant="destructive"
+              onClick={() => {
+
+                setShowLogoutConfirm(false);
+
+                onLogout();
+              }}
+            >
+              Keluar
+            </Button>
+
+          </div>
+
+      </DialogContent>
+    </Dialog>
     </div>
   );
 }

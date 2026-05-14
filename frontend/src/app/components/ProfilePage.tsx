@@ -10,6 +10,7 @@ import avatar4 from '../../assets/avatars/cat_4.png';
 import avatar5 from '../../assets/avatars/cat_5.png';
 import avatar6 from '../../assets/avatars/cat_6.png';
 
+
 interface ProfilePageProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -171,7 +172,7 @@ export function ProfilePage({ open, onOpenChange, userEmail }: ProfilePageProps)
             <h4 className="text-sm font-medium text-muted-foreground">Chatbot WhatsApp</h4>
 
             <a
-              href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20menggunakan%20chatbot"
+              href="https://wa.me/62881080694481?text=Halo%20saya%20ingin%20menggunakan%20chatbot"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 rounded-md bg-green-500/10 hover:bg-green-500/20 border border-green-500/20 transition-colors group"
