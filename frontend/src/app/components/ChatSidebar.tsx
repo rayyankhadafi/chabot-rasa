@@ -611,7 +611,7 @@ export function ChatSidebar({
           <div className="flex justify-end gap-2 pt-4">
 
             <Button
-              variant="outline"
+              variant="outline" className="cursor-pointer hover:bg-accent transition-colors"
               onClick={() =>
                 setShowLogoutConfirm(false)
               }
@@ -620,11 +620,9 @@ export function ChatSidebar({
             </Button>
 
             <Button
-              variant="destructive"
+              variant="destructive" className="cursor-pointer hover:opacity-90 transition-all"
               onClick={() => {
-
                 setShowLogoutConfirm(false);
-
                 onLogout();
               }}
             >
