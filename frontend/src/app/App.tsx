@@ -10,6 +10,8 @@ import { ProfilePage } from './components/ProfilePage';
 import { SettingsDialog } from './components/SettingsDialog';
 
 import { Toaster } from './components/ui/sonner';
+import { toast }
+from "sonner";
 
 export default function App() {
 
@@ -68,7 +70,7 @@ const [chats, setChats] = useState<Chat[]>([
   useEffect(() => {
 
     const savedUser =
-      localStorage.getItem('user');
+      sessionStorage.getItem('user');
 
     if (savedUser) {
 
@@ -83,6 +85,81 @@ const [chats, setChats] = useState<Chat[]>([
 
   }, []);
 
+// Auto logout jika idle
+
+  useEffect(() => {
+
+    let timeout:
+      ReturnType<typeof setTimeout>;
+
+    const resetTimer =
+      () => {
+        clearTimeout(
+          timeout
+        );
+
+        timeout =
+          setTimeout(
+            () => {
+              sessionStorage.clear();
+              setIsLoggedIn(
+                false
+              );
+
+              setUserEmail('');
+              toast.error('Sesi berakhir',{
+                description:'Silakan login kembali'
+              }
+            );
+          },
+
+            30 * 60 * 1000
+            // 30 menit
+          );
+      };
+
+    window.addEventListener(
+      'mousemove',
+      resetTimer
+    );
+
+    window.addEventListener(
+      'keydown',
+      resetTimer
+    );
+
+    window.addEventListener(
+      'click',
+      resetTimer
+    );
+
+    resetTimer();
+
+    return () => {
+
+      clearTimeout(
+        timeout
+      );
+
+      window.removeEventListener(
+        'mousemove',
+        resetTimer
+      );
+
+      window.removeEventListener(
+        'keydown',
+        resetTimer
+      );
+
+      window.removeEventListener(
+        'click',
+        resetTimer
+      );
+
+    };
+
+  }, []);
+
   const handleLogin = (email: string) => {
     setUserEmail(email);
 
@@ -91,14 +168,13 @@ const [chats, setChats] = useState<Chat[]>([
 
   const handleLogout = () => {
 
-    localStorage.removeItem('token');
-
-    localStorage.removeItem('user');
+    sessionStorage.clear;
 
     setIsLoggedIn(false);
 
     setUserEmail('');
   };
+  
 
   const handleShowSettings = () => {
     setShowSettings(true);

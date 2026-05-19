@@ -63,10 +63,10 @@ export function Login({ onLogin, onShowRegister, }: LoginProps) {
     }
 
     // simpan token
-    localStorage.setItem('token', data.token);
+    sessionStorage.setItem('token', data.token);
 
     // simpan user
-    localStorage.setItem(
+    sessionStorage.setItem(
       'user',
       JSON.stringify(data.user)
     );
