@@ -25,12 +25,14 @@ RESPONSES = {
     # ================= INHAL =================
 
     "inhal_cara": """
-        Jika mahasiswa tidak mengikuti praktikum, maka tidak akan mendapatkan nilai pada pertemuan tersebut.
-        Namun, mahasiswa masih dapat mengikuti inhal untuk memperoleh nilai pengganti sesuai ketentuan laboratorium.
+        Jika mahasiswa tidak mengikuti praktikum, maka tidak akan mendapatkan nilai pada pertemuan 
+        tersebut. Namun, mahasiswa masih dapat mengikuti inhal untuk memperoleh nilai pengganti
+        sesuai ketentuan laboratorium.
 
         Ketentuan inhal umumnya:
         - Biaya inhal sekitar Rp25.000 per pertemuan
-        - Mahasiswa dengan izin resmi, seperti sakit atau musibah, biasanya dapat mengikuti inhal tanpa biaya
+        - Mahasiswa dengan izin resmi, seperti sakit atau musibah, biasanya dapat mengikuti inhal tanpa
+          biaya
 
         Prosedur pembayaran inhal:
         - Hubungi Pak Agung Purnomo melalui WhatsApp
@@ -40,23 +42,28 @@ RESPONSES = {
     """,
 
     "inhal_default": """
-        Untuk informasi dan ketentuan inhal praktikum, kamu dapat menanyakannya langsung kepada asisten praktikum atau laboran.
-        Dengan begitu, kamu bisa mendapatkan informasi yang lebih jelas mengenai syarat, jadwal, dan prosedur mengikuti inhal.
+        Untuk informasi dan ketentuan inhal praktikum, kamu dapat menanyakannya langsung kepada asisten
+        praktikum atau laboran.
+
+        Dengan begitu, kamu bisa mendapatkan informasi yang lebih jelas mengenai syarat, jadwal, dan
+        prosedur mengikuti inhal.
     """,
 
     # ================= JADWAL =================
 
     "jadwal_pindah": """
-        Pindah atau mengubah jadwal praktikum biasanya dapat dilakukan, terutama jika terdapat bentrok dengan jadwal kuliah
-        atau praktikum lain.
+        Pindah atau mengubah jadwal praktikum biasanya dapat dilakukan, terutama jika terdapat bentrok
+        dengan jadwal kuliah atau praktikum lain.
 
         Berikut beberapa ketentuan umum terkait pindah jadwal praktikum:
         - Mahasiswa sudah terdaftar pada salah satu slot praktikum
         - Perpindahan jadwal biasanya dilakukan setelah masa pemilihan slot selesai
         - Pengajuan pindah jadwal dapat dilakukan melalui laboran atau sistem registrasi laboratorium
-        - Informasi dan jadwal layanan bentrok biasanya diumumkan melalui website atau Grup Whatsapp dan Telegram resmi laboratorium
+        - Informasi dan jadwal layanan bentrok biasanya diumumkan melalui website atau Grup Whatsapp
+        dan Telegram resmi laboratorium
 
-        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan jadwal pengajuan pindah slot praktikum.
+        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan jadwal
+        pengajuan pindah slot praktikum.
     """,
 
     "jadwal_default": """
@@ -75,8 +82,8 @@ RESPONSES = {
 
         Namun, pada beberapa mata kuliah atau sesi praktikum tertentu, penggunaan HP bisa saja dibatasi
         atau tidak diperbolehkan.
-        Karena itu, pastikan kamu mengikuti ketentuan yang telah ditetapkan oleh asisten laboratorium pada
-        praktikum tersebut.
+        Karena itu, pastikan kamu mengikuti ketentuan yang telah ditetapkan oleh asisten laboratorium
+        pada praktikum tersebut.
     """,
 
     "aturan_browser": """
@@ -95,36 +102,41 @@ RESPONSES = {
     """,
 
     "aturan_default": """
-        Aturan praktikum di Informatika UAD dibuat untuk menjaga ketertiban dan kelancaran kegiatan praktikum di laboratorium.
+        Aturan praktikum di Informatika UAD dibuat untuk menjaga ketertiban dan kelancaran kegiatan
+        praktikum di laboratorium.
         Berikut beberapa ketentuan umum praktikum:
 
         1. Pendaftaran dan Administrasi
         Mahasiswa wajib melakukan KRS mata kuliah terlebih dahulu sebelum mendaftar praktikum
         Pendaftaran praktikum dilakukan melalui sistem registrasi laboratorium (REGLAB)
         2. Tata Tertib Praktikum
-        Mahasiswa wajib hadir sesuai jadwal praktikum yang telah ditentukan
-        Tidak diperbolehkan mengubah pengaturan software atau hardware komputer laboratorium tanpa izin asisten atau laboran
-        Praktikan harus menjaga ketertiban selama kegiatan praktikum berlangsung
-        Orang yang tidak berkepentingan tidak diperbolehkan berada di ruang laboratorium saat praktikum berlangsung
+        -Mahasiswa wajib hadir sesuai jadwal praktikum yang telah ditentukan
+        -Tidak diperbolehkan mengubah pengaturan software atau hardware komputer laboratorium tanpa izin
+         asisten atau laboran
+        -Praktikan harus menjaga ketertiban selama kegiatan praktikum berlangsung
+        -Orang yang tidak berkepentingan tidak diperbolehkan berada di ruang laboratorium saat praktikum
+         berlangsung
         3. Sanksi Pelanggaran
         Pelanggaran tata tertib dapat dikenakan sanksi sesuai aturan laboratorium atau fakultas
 
-        Pastikan kamu selalu mengikuti arahan dari asisten praktikum dan memantau informasi terbaru dari laboratorium.
+        Pastikan kamu selalu mengikuti arahan dari asisten praktikum dan memantau informasi terbaru
+        dari laboratorium.
     """,
 
     # ================= KEHADIRAN =================
 
     "kehadiran_rules": """
-        Jika tidak dapat menghadiri praktikum, mahasiswa sebaiknya segera menghubungi asisten praktikum dan
-        memberikan alasan serta bukti yang jelas, seperti surat sakit, musibah, atau surat izin dari kampus.
-        Jika alasan atau bukti yang diberikan tidak dapat diverifikasi, maka mahasiswa biasanya akan dianggap
-        tidak hadir (alfa).
+        Jika tidak dapat menghadiri praktikum, mahasiswa sebaiknya segera menghubungi asisten praktikum
+        dan memberikan alasan serta bukti yang jelas, seperti surat sakit, musibah, atau surat izin
+        dari kampus.
+        Jika alasan atau bukti yang diberikan tidak dapat diverifikasi, maka mahasiswa biasanya akan
+        dianggap tidak hadir (alfa).
 
-        Selain itu, toleransi keterlambatan praktikum umumnya maksimal 15 menit. Jika melebihi batas tersebut,
-        mahasiswa biasanya tidak diperbolehkan mengikuti praktikum dan akan dianggap alfa, sehingga tidak mendapatkan
-        nilai pada pertemuan tersebut.
-        Namun, mahasiswa masih dapat mengikuti inhall sesuai ketentuan laboratorium untuk memperoleh nilai pengganti
-        akibat ketidakhadiran praktikum.
+        Selain itu, toleransi keterlambatan praktikum umumnya maksimal 15 menit. Jika melebihi batas
+        tersebut, mahasiswa biasanya tidak diperbolehkan mengikuti praktikum dan akan dianggap alfa,
+        sehingga tidak mendapatkan nilai pada pertemuan tersebut.
+        Namun, mahasiswa masih dapat mengikuti inhall sesuai ketentuan laboratorium untuk memperoleh
+        nilai pengganti akibat ketidakhadiran praktikum.
 
         Jadi, pastikan kamu selalu hadir tepat waktu dan mengikuti seluruh ketentuan praktikum ya.
     """,
@@ -132,16 +144,17 @@ RESPONSES = {
     "kehadiran_minimal": """
         Minimal kehadiran praktikum umumnya adalah 11 kali pertemuan.
 
-        Jika mahasiswa tidak memenuhi batas minimal kehadiran atau tidak hadir lebih dari 3 kali, maka mahasiswa
-        biasanya akan dianggap tidak memenuhi syarat mengikuti praktikum atau responsi dan tercatat alfa pada pertemuan
-        yang ditinggalkan.
+        Jika mahasiswa tidak memenuhi batas minimal kehadiran atau tidak hadir lebih dari 3 kali, maka
+        mahasiswacbiasanya akan dianggap tidak memenuhi syarat mengikuti praktikum atau responsi dan
+        tercatat alfa pada pertemuancyang ditinggalkan.
     """,
 
     "kehadiran_default": """
-        Mahasiswa wajib memenuhi minimal kehadiran praktikum agar tetap dapat mengikuti evaluasi akhir dan responsi.
+        Mahasiswa wajib memenuhi minimal kehadiran praktikum agar tetap dapat mengikuti evaluasi akhir
+        dan responsi.
 
-        Kehadiran praktikum juga menjadi salah satu komponen yang mempengaruhi nilai, jadi pastikan untuk selalu
-        hadir pada setiap pertemuan praktikum.
+        Kehadiran praktikum juga menjadi salah satu komponen yang mempengaruhi nilai, jadi pastikan
+        untuk selalu hadir pada setiap pertemuan praktikum.
     """,
 
     # ================= NILAI =================
@@ -225,7 +238,8 @@ RESPONSES = {
     # ================= ONLINE =================
 
     "online_ai": """
-        Penggunaan AI seperti ChatGPT biasanya tidak diperbolehkan saat praktikum atau post-test berlangsung.
+        Penggunaan AI seperti ChatGPT biasanya tidak diperbolehkan saat praktikum atau post-test
+        berlangsung.
 
         Namun, penggunaan browser untuk kebutuhan praktikum, seperti membuka dokumentasi atau localhost,
         umumnya masih diperbolehkan sesuai ketentuan laboratorium.
@@ -290,11 +304,15 @@ RESPONSES = {
     """,
 
     "pendaftaran_jadwal": """
-        Jadwal pendaftaran praktikum biasanya diumumkan sebelum awal semester atau sebelum kegiatan praktikum dimulai.
+        Jadwal pendaftaran praktikum biasanya diumumkan sebelum awal semester atau sebelum kegiatan
+        praktikum dimulai.
+
         Umumnya, pendaftaran praktikum berlangsung selama 1-2 minggu setelah perkuliahan dimulai.
         Untuk semester gasal, pendaftaran biasanya ditutup pada minggu kedua atau ketiga bulan September,
         sedangkan semester genap umumnya ditutup pada minggu kedua atau ketiga bulan Maret.
-        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan jadwal pendaftaran.
+
+        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan jadwal
+        pendaftaran.
     """,
 
     "pendaftaran_syarat": """
@@ -352,8 +370,8 @@ RESPONSES = {
         bertanggung jawab untuk mengganti atau memperbaiki alat yang rusak.
 
         Namun, jika kerusakan bukan disebabkan oleh kelalaian praktikan, sebaiknya segera jelaskan
-        kronologi kejadian kepada asisten laboratorium agar dapat dilakukan pengecekan lebih lanjut terkait
-        penyebab kerusakan alat tersebut.
+        kronologi kejadian kepada asisten laboratorium agar dapat dilakukan pengecekan lebih lanjut
+        terkait penyebab kerusakan alat tersebut.
     """,
 
     "lab_default": """

@@ -26,7 +26,8 @@ RESPONSES = {
 
     "nilai_tidak_sesuai": """
         Jika nilai responsi tidak sesuai, silakan hubungi asisten praktikum terkait.
-        Nantinya akan dilakukan pengecekan ulang, dan jika terjadi kesalahan input maka nilai dapat diperbaiki.
+        Nantinya akan dilakukan pengecekan ulang, dan jika terjadi kesalahan input maka nilai
+        dapat diperbaiki.
     """,
 
     "nilai_perbaikan": """
@@ -55,15 +56,17 @@ RESPONSES = {
     """,
 
     "nilai_tidak_masuk": """
-        Jika nilai responsi kamu belum muncul pada hasil penilaian, silakan hubungi asisten praktikum untuk
-        dilakukan pengecekan lebih lanjut. 
-        Setelah proses pengecekan selesai, nilai akan diperbarui atau ditampilkan sesuai data yang telah diverifikasi.
+        Jika nilai responsi kamu belum muncul pada hasil penilaian, silakan hubungi asisten
+        praktikum untuk dilakukan pengecekan lebih lanjut. 
+        Setelah proses pengecekan selesai, nilai akan diperbarui atau ditampilkan sesuai data
+        yang telah diverifikasi.
     """,
 
     "nilai_penting": """
         Nilai responsi merupakan salah satu komponen penting dalam penilaian mata kuliah praktikum.
-        Jika nilai responsi kosong atau bernilai 0, hal tersebut dapat mempengaruhi nilai akhir mata kuliah dan 
-        membuat hasil akhir menjadi lebih rendah.
+        Jika nilai responsi kosong atau bernilai 0, hal tersebut dapat mempengaruhi nilai akhir
+        mata kuliah dan membuat hasil akhir menjadi lebih rendah.
+
         Karena itu, pastikan kamu mengikuti responsi dan menyelesaikannya dengan baik.
     """,
 
@@ -91,16 +94,17 @@ RESPONSES = {
 
     "jadwal_default": """
         Informasi mengenai jadwal responsi dapat ditanyakan langsung kepada asisten praktikum.
-        Selain itu, kamu juga dapat memantau grup praktikum atau informasi resmi dari web tif laboratorium untuk
-        mendapatkan update terbaru.
+        Selain itu, kamu juga dapat memantau grup praktikum atau informasi resmi dari web tif
+        laboratorium untuk mendapatkan update terbaru.
     """,
 
     # ================= MEKANISME =================
 
     "mekanisme_umum": """
-        Responsi praktikum biasanya dilaksanakan di akhir semester sebagai bagian dari evaluasi akhir praktikum.
-        Responsi dapat dilaksanakan secara offline menggunakan komputer di laboratorium maupun online dengan
-        laptop pribadi untuk beberapa mata kuliah tertentu.
+        Responsi praktikum biasanya dilaksanakan di akhir semester sebagai bagian dari evaluasi
+        akhir praktikum.
+        Responsi dapat dilaksanakan secara offline menggunakan komputer di laboratorium maupun
+        online dengan laptop pribadi untuk beberapa mata kuliah tertentu.
         
         Pelaksanaannya umumnya meliputi:
         - Ujian tertulis sekitar 15 menit
@@ -108,7 +112,8 @@ RESPONSES = {
         - Pengawasan oleh asisten praktikum selama responsi berlangsung
         - Toleransi keterlambatan maksimal 15 menit
 
-        Selama responsi berlangsung, mahasiswa wajib mematuhi tata tertib laboratorium dan mengerjakan soal secara mandiri.
+        Selama responsi berlangsung, mahasiswa wajib mematuhi tata tertib laboratorium dan
+        mengerjakan soal secara mandiri.
     """,
 
     "mekanisme_kertas": """
@@ -239,14 +244,17 @@ RESPONSES = {
         Berikut beberapa aturan umum saat mengikuti responsi praktikum di Informatika UAD:
 
         -Hadir tepat waktu dengan toleransi keterlambatan maksimal 15 menit
-        -Jika terlambat melebihi batas, mahasiswa biasanya tidak diperbolehkan mengikuti responsi dan nilai dapat menjadi 0
+        -Jika terlambat melebihi batas, mahasiswa biasanya tidak diperbolehkan mengikuti responsi
+         dan nilai dapat menjadi 0
         -Responsi umumnya dilaksanakan secara offline di laboratorium pada akhir periode praktikum
         -Waktu responsi biasanya terdiri dari sesi persiapan, pengerjaan soal, dan penutupan
         -Mahasiswa wajib berpakaian rapi dan menjaga ketertiban selama di laboratorium
         -Tidak diperbolehkan membawa makanan atau minuman ke dalam ruang laboratorium
-        -Dilarang mengubah pengaturan komputer atau melepas perangkat laboratorium tanpa izin asisten
+        -Dilarang mengubah pengaturan komputer atau melepas perangkat laboratorium tanpa izin
+         asisten
 
-        Pastikan kamu selalu mengikuti arahan dari asisten praktikum agar responsi berjalan dengan lancar.
+        Pastikan kamu selalu mengikuti arahan dari asisten praktikum agar responsi berjalan dengan
+        lancar.
     """,
 
     # ================= PENGERTIAN =================
