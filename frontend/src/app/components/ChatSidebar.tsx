@@ -25,6 +25,8 @@ import {
   useRef
 } from 'react';
 
+import logo from '../../assets/logo/logo.png';
+
 // =========================
 // INTERFACES
 // =========================
@@ -227,7 +229,7 @@ export function ChatSidebar({
   return (
 
     <div
-      className={`fixed md:relative z-50 top-0 left-0 w-[95vw] max-w-80 bg-sidebar border-r border-sidebar-border h-dvh shrink-0 flex flex-col 
+      className={`fixed md:relative z-50 top-0 left-0 w-[95vw] max-w-60 bg-sidebar border-r border-sidebar-border h-dvh shrink-0 flex flex-col 
         overflow-hidden min-h-0 shadow-sm transition-transform duration-300
         ${
           sidebarOpen
@@ -241,15 +243,13 @@ export function ChatSidebar({
           HEADER
       ========================= */}
 
-      <div className="px-4 pt-5 pb-4 shrink-0">
+      <div className="px pt-3 pb-3 shrink-0">
 
-        <h1 className="font-semibold text-sidebar-foreground text-base">
-          Chatbot Lab
-        </h1>
+        <div className="flex flex-col items-start">
 
-        <p className="text-xs text-sidebar-foreground/40 mt-0.5">
-          Informatika UAD
-        </p>
+          <img src={logo} alt="Logo" className="h-12 w-auto object-contain"/>
+
+        </div>
 
       </div>
 

@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { toast } from 'sonner';
+import logo from '../../assets/logo/logo.png';
 import {
   Card,
   CardContent,
@@ -88,8 +89,19 @@ export function Login({ onLogin, onShowRegister, }: LoginProps) {
    return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <Card className="w-full max-w-md shadow-lg border-border/50">
-        <CardHeader className="text-center space-y-2 pb-6">
-          <CardTitle className="text-2xl">Masuk ke Chatbot Lab</CardTitle>
+        <CardHeader className="text-center space-y pb-6">
+          <img src={logo} alt="PRIVA" className="w-60 h-20 mx-auto object-contain"/>
+
+        <CardTitle className="text-2xl">
+          <span className="brad-font text-xl font-bold text-blue-500">
+            PRIVA
+          </span>
+
+          <p className="text-sm text-muted-foreground">
+            Praktikum Virtual Assistant
+          </p>
+
+        </CardTitle>
           <CardDescription className="text-muted-foreground/70">
             Masukkan email dan password Anda untuk mengakses chatbot
           </CardDescription>

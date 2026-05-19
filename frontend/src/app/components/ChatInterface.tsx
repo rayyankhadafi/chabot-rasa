@@ -302,13 +302,13 @@ export function ChatInterface({
               />
 
               <h1 className="text-3xl font-bold tracking-tight mb-3">
-                Selamat Datang di Chatbot Lab UAD
+                Selamat Datang di PRIVA
               </h1>
 
               <p className="text-muted-foreground max-w-xl mb-8 leading-relaxed">
-                Tanyakan informasi seputar laboratorium,
+                Tanyakan informasi seputar
                 praktikum, responsi, jadwal,
-                dan aturan Informatika UAD.
+                dan aturan laboratorium Informatika UAD.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-2xl">

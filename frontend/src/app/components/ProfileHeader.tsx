@@ -34,7 +34,22 @@ export function ProfileHeader({ userEmail, onLogout, onShowProfile, onShowSettin
       >
         <Menu className="h-5 w-5" />
       </Button>
+
+      <div className="flex flex-col">
+
+    <h1 className="text-xl font-bold bg-linear-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent brand-font tracking-wide">
+      PRIVA                                                                   
+    </h1>
+
+    <p className="text-xs text-muted-foreground">
+      Praktikum Virtual Assistant
+    </p>
+
+  </div>
+
     </div>
+
+    
 
       <div className="relative">
         <button

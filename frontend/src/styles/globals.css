@@ -1,6 +1,14 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-ui:
+    "Inter",
+    sans-serif;
+
+  --font-brand:
+    "Sora",
+    sans-serif;
+
   --font-size: 14px;
 
   /* LIGHT MODE */
@@ -139,7 +147,14 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family:"Inter", sans-serif;
   }
+}
+
+.brand-font{
+  font-family:
+  "Sora",
+  sans-serif;
 }
 
 /**
