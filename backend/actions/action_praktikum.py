@@ -2,6 +2,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
 import textwrap
+from textwrap import dedent
 
 
 # =========================================================
@@ -24,7 +25,7 @@ RESPONSES = {
 
     # ================= INHAL =================
 
-    "inhal_cara": """
+    "inhal_cara": dedent("""
         Jika mahasiswa tidak mengikuti praktikum, maka tidak akan mendapatkan nilai pada pertemuan 
         tersebut. Namun, mahasiswa masih dapat mengikuti inhal untuk memperoleh nilai pengganti
         sesuai ketentuan laboratorium.
@@ -42,19 +43,19 @@ RESPONSES = {
 
         Jika kamu inhal lebih dari 3 kali atau maksimal batas hadir, maka praktikum tersebut
         otomatis gagal, artinya kamu tidak mendapat nilai dari praktikum tersebut.
-    """,
+    """).strip(),
 
-    "inhal_default": """
+    "inhal_default": dedent("""
         Untuk informasi dan ketentuan inhal praktikum, kamu dapat menanyakannya langsung kepada
         asisten praktikum atau laboran.
         
         Dengan begitu, kamu bisa mendapatkan informasi yang lebih jelas mengenai syarat, jadwal,
         dan prosedur mengikuti inhal.
-    """,
+    """).strip(),
 
     # ================= JADWAL =================
 
-    "jadwal_pindah": """
+    "jadwal_pindah": dedent("""
         Pindah atau mengubah jadwal praktikum biasanya dapat dilakukan, terutama jika terdapat
         bentrok dengan jadwal kuliah atau praktikum lain.
 
@@ -63,22 +64,23 @@ RESPONSES = {
         - Perpindahan jadwal biasanya dilakukan setelah masa pemilihan slot selesai
         - Pengajuan pindah jadwal dapat dilakukan melalui laboran atau sistem registrasi laboratorium
         - Informasi dan jadwal layanan bentrok biasanya diumumkan melalui website atau Grup Whatsapp
-           dan Telegram resmi laboratorium
-
+        dan Telegram resmi laboratorium
+           
         Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan 
-        jadwal pengajuan pindah slot praktikum.""",
+        jadwal pengajuan pindah slot praktikum.
+    """).strip(),
 
-    "jadwal_default": """
+    "jadwal_default": dedent("""
         Jadwal praktikum biasanya diumumkan oleh asisten praktikum
         atau laboratorium sebelum praktikum dimulai.
 
         Mahasiswa dapat melihat jadwal praktikum
         melalui website Reglab TIF UAD atau grup praktikum.
-    """,
+    """).strip(),
 
     # ================= ATURAN =================
 
-    "aturan_hp": """
+    "aturan_hp": dedent("""
         Penggunaan HP saat praktikum umumnya diperbolehkan selama tidak mengganggu jalannya praktikum
         dan tetap mengikuti arahan asisten praktikum.
 
@@ -86,9 +88,9 @@ RESPONSES = {
         atau tidak diperbolehkan.
         Karena itu, pastikan kamu mengikuti ketentuan yang telah ditetapkan oleh asisten laboratorium
         pada praktikum tersebut.
-    """,
+    """).strip(),
 
-    "aturan_browser": """
+    "aturan_browser": dedent("""
         Penggunaan browser saat praktikum umumnya diperbolehkan untuk kebutuhan praktikum,
         seperti membuka dokumentasi atau mengakses localhost.
         Namun, saat pelaksanaan post-test atau evaluasi tertentu, beberapa praktikum dapat membatasi
@@ -96,14 +98,14 @@ RESPONSES = {
 
         Selain itu, penggunaan layanan AI seperti ChatGPT
         atau tools AI lainnya biasanya tidak diperbolehkan jika tidak ada izin dari asisten praktikum.
-    """,
+    """).strip(),
 
-    "aturan_kerjasama": """
+    "aturan_kerjasama": dedent("""
         Mahasiswa diharapkan mengerjakan praktikum secara mandiri,
         kecuali jika terdapat ketentuan kerja kelompok dari asisten praktikum.
-    """,
+    """).strip(),
 
-    "aturan_default": """
+    "aturan_default": dedent("""
         Aturan praktikum di Informatika UAD dibuat untuk menjaga ketertiban dan kelancaran kegiatan
         praktikum di laboratorium.
         Berikut beberapa ketentuan umum praktikum:
@@ -123,11 +125,11 @@ RESPONSES = {
 
         Pastikan kamu selalu mengikuti arahan dari asisten praktikum dan memantau informasi terbaru
         dari laboratorium.
-    """,
+    """).strip(),
 
     # ================= KEHADIRAN =================
 
-    "kehadiran_rules": """
+    "kehadiran_rules": dedent("""
         Jika tidak dapat menghadiri praktikum, mahasiswa sebaiknya segera menghubungi asisten
         praktikum dan memberikan alasan serta bukti yang jelas, seperti surat sakit, musibah, atau
         surat izin dari kampus.
@@ -143,27 +145,27 @@ RESPONSES = {
         nilai pengganti akibat ketidakhadiran praktikum.
 
         Jadi, pastikan kamu selalu hadir tepat waktu dan mengikuti seluruh ketentuan praktikum ya.
-    """,
+    """).strip(),
 
-    "kehadiran_minimal": """
+    "kehadiran_minimal": dedent("""
         Minimal kehadiran praktikum umumnya adalah 11 kali pertemuan.
 
         Jika mahasiswa tidak memenuhi batas minimal kehadiran atau tidak hadir lebih dari 3 kali,
         maka mahasiswa biasanya akan dianggap tidak memenuhi syarat mengikuti praktikum atau
         responsi dan tercatat alfa pada pertemuancyang ditinggalkan.
-    """,
+    """).strip(),
 
-    "kehadiran_default": """
+    "kehadiran_default": dedent("""
         Mahasiswa wajib memenuhi minimal kehadiran praktikum agar tetap dapat mengikuti evaluasi
         akhir dan responsi.
 
         Kehadiran praktikum juga menjadi salah satu komponen yang mempengaruhi nilai, jadi pastikan
         untuk selalu hadir pada setiap pertemuan praktikum.
-    """,
+    """).strip(),
 
     # ================= NILAI =================
 
-    "nilai_sistem": """
+    "nilai_sistem": dedent("""
         Sistem penilaian praktikum di Informatika UAD umumnya menggunakan beberapa komponen penilaian
         untuk mengukur pemahaman dan kemampuan mahasiswa selama praktikum berlangsung.
 
@@ -176,73 +178,73 @@ RESPONSES = {
 
         Penilaian praktikum biasanya disesuaikan dengan ketentuan masing-masing mata kuliah dan
         laboratorium.
-    """,
+    """).strip(),
 
-    "nilai_revisi": """
+    "nilai_revisi": dedent("""
         Jika terjadi kesalahan penilaian,
         mahasiswa dapat menghubungi asisten praktikum
         untuk melakukan konfirmasi atau revisi nilai.
-    """,
+    """).strip(),
 
-    "nilai_pindah": """
+    "nilai_pindah": dedent("""
         Jika kamu mengganti atau pindah jadwal praktikum, biasanya data dan nilai praktikum juga akan 
         menyesuaikan dengan jadwal yang baru.
 
         Namun, sebelum melakukan perpindahan jadwal, sebaiknya konfirmasikan terlebih dahulu
         kepada asisten praktikum agar proses verifikasi data dan nilai dapat dilakukan dengan
         benar.
-    """,
+    """).strip(),
 
-    "nilai_matkul": """
+    "nilai_matkul": dedent("""
         Nilai praktikum biasanya memiliki pengaruh yang cukup besar terhadap nilai akhir mata kuliah.
         Pada beberapa mata kuliah, komponen praktikum dapat berkontribusi sekitar 20%-40% dari
         total nilai akhir, tergantung ketentuan pada RPS masing-masing mata kuliah.
 
         Selain itu, praktikum juga sering menjadi salah satu syarat kelulusan mata kuliah tertentu.
         Karena itu, pastikan kamu mengikuti praktikum dengan baik dan menjaga nilai tetap aman.
-    """,
+    """).strip(),
     
-    "nilai_responsi": """
+    "nilai_responsi": dedent("""
         Nilai praktikum dan nilai responsi merupakan komponen penilaian yang berbeda.
 
         Nilai praktikum tidak secara langsung mempengaruhi nilai responsi, namun keduanya biasanya
         akan digabung untuk menjadi nilai akhir praktikum atau mata kuliah terkait.
-    """,
+    """).strip(),
 
-    "nilai_default": """
+    "nilai_default": dedent("""
         Penilaian praktikum biasanya terdiri dari:
         - Kehadiran
         - Tugas praktikum
         - Responsi
         - Praktik langsung
-    """,
+    """).strip(),
 
     # ================= PERALATAN =================
 
-    "peralatan_laptop": """
+    "peralatan_laptop": dedent("""
         Beberapa praktikum memperbolehkan mahasiswa menggunakan laptop pribadi sesuai ketentuan
         yang berlaku di laboratorium.
 
         Namun, penggunaan laptop pribadi tetap harus mengikuti arahan dari asisten praktikum atau
         laboran pada mata kuliah tersebut.
-    """,
+    """).strip(),
 
-    "peralatan_modul": """
+    "peralatan_modul": dedent("""
         Mahasiswa biasanya tidak diwajibkan membawa modul atau catatan praktikum ke laboratorium.
 
         Hal ini karena modul praktikum umumnya sudah tersedia pada komputer laboratorium atau
         dibagikan secara digital oleh asisten praktikum.
-    """,
+    """).strip(),
 
-    "peralatan_default": """
+    "peralatan_default": dedent("""
         Perlengkapan yang dibutuhkan saat praktikum
         biasanya akan diinformasikan oleh asisten praktikum
         sebelum praktikum dimulai.
-    """,
+    """).strip(),
 
     # ================= ONLINE =================
 
-    "online_ai": """
+    "online_ai": dedent("""
         Penggunaan AI seperti ChatGPT biasanya tidak diperbolehkan saat praktikum atau
         post-test berlangsung.
 
@@ -252,9 +254,9 @@ RESPONSES = {
         Karena itu, pastikan kamu bertanya terlebih dahulu kepada asisten laboratorium sebelum
         menggunakan tools tertentu agar tidak dianggap melakukan kecurangan saat praktikum
         berlangsung.
-    """,
+    """).strip(),
 
-    "online_aturan":"""
+    "online_aturan": dedent("""
         Aturan praktikum online yang umum diterapkan antara lain:
         1. Hadir tepat waktu sesuai jadwal praktikum.
         2. Menggunakan nama asli dan NIM pada akun meeting.
@@ -266,24 +268,24 @@ RESPONSES = {
             seperti ChatGPT tanpa izin jika tidak diperbolehkan.
         8. Tetap aktif dan tidak meninggalkan sesi tanpa izin.
 
-    """,
+    """).strip(),
 
-    "online_masalah": """
+    "online_masalah": dedent("""
         Jika mengalami kendala internet saat praktikum online atau offline,
         segera informasikan kepada asisten praktikum.
-    """,
+    """).strip(),
 
-    "online_default": """
+    "online_default": dedent("""
         Beberapa praktikum dapat dilaksanakan secara online sesuai ketentuan mata kuliah atau
         laboratorium.
 
         Karena itu, mahasiswa disarankan memiliki atau menyiapkan laptop pribadi agar dapat
         mengikuti praktikum online dengan lancar.
-    """,
+    """).strip(),
 
     # ================= PENDAFTARAN =================
 
-    "pendaftaran_mekanisme": """
+    "pendaftaran_mekanisme": dedent("""
         Pendaftaran praktikum biasanya dilakukan pada awal semester dan dilaksanakan secara
         online melalui sistem registrasi laboratorium.
 
@@ -301,15 +303,15 @@ RESPONSES = {
         Pastikan data yang dimasukkan sudah benar dan selalu pantau informasi terbaru dari
         laboratorium agar tidak melewatkan jadwal pendaftaran.
 
-    """,
+    """).strip(),
 
-    "pendaftaran_telat": """
+    "pendaftaran_telat": dedent("""
         Jika terlambat mendaftar praktikum,
         mahasiswa dapat menghubungi asisten praktikum
         atau laboratorium untuk menanyakan kemungkinan pendaftaran susulan.
-    """,
+    """).strip(),
 
-    "pendaftaran_jadwal": """
+    "pendaftaran_jadwal": dedent("""
         Jadwal pendaftaran praktikum biasanya diumumkan sebelum awal semester atau sebelum
         kegiatan praktikum dimulai.
 
@@ -320,45 +322,45 @@ RESPONSES = {
 
         Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan
         jadwal pendaftaran.
-    """,
+    """).strip(),
 
-    "pendaftaran_syarat": """
+    "pendaftaran_syarat": dedent("""
         Beberapa syarat mengikuti praktikum biasanya meliputi:
         - Terdaftar pada mata kuliah praktikum
         - Melakukan pendaftaran praktikum
         - Sudah melakukan aktivasi pembayaran praktikum
-    """,
+    """).strip(),
 
-    "pendaftaran_slot": """
+    "pendaftaran_slot": dedent("""
         Kuota praktikum biasanya terbatas sesuai kapasitas laboratorium dan jumlah asisten
         praktikum.
 
         Jika slot praktikum sudah penuh, mahasiswa dapat menghubungi pihak laboratorium atau
         menunggu informasi mengenai pembukaan slot tambahan.
-    """,
+    """).strip(),
 
-    "pendaftaran_bayar": """
+    "pendaftaran_bayar": dedent("""
         Biaya praktikum biasanya digunakan untuk mendukung kebutuhan operasional laboratorium dan
         pelaksanaan kegiatan praktikum.
-    """,
+    """).strip(),
 
-    "pendaftaran_link": """
+    "pendaftaran_link": dedent("""
         Informasi dan link pendaftaran praktikum
         biasanya dibagikan melalui laboratorium,
         grup praktikum, atau sistem informasi akademik.
-    """,
+    """).strip(),
 
-    "pendaftaran_default": """
+    "pendaftaran_default": dedent("""
         Pendaftaran praktikum biasanya dilakukan
         melalui sistem atau informasi yang diberikan laboratorium.
 
         Pastikan mahasiswa mengikuti prosedur
         dan jadwal pendaftaran yang telah ditentukan.
-    """,
+    """).strip(),
 
     # ================= LAB =================
 
-    "lab_peminjaman": """
+    "lab_peminjaman": dedent("""
         Peminjaman alat di Laboratorium Teknik Informatika UAD biasanya dilakukan melalui pengajuan
         formulir dan persetujuan dari laboran atau pihak laboratorium.
 
@@ -371,25 +373,25 @@ RESPONSES = {
 
         Mahasiswa juga bertanggung jawab menjaga alat yang dipinjam selama masa penggunaan.
         Sebelum mengajukan peminjaman, pastikan terlebih dahulu ketersediaan alat di laboratorium.
-    """,
+    """).strip(),
 
-    "lab_rusak": """
+    "lab_rusak": dedent("""
         Jika alat laboratorium rusak karena kelalaian praktikan, maka praktikan tersebut biasanya
         bertanggung jawab untuk mengganti atau memperbaiki alat yang rusak.
 
         Namun, jika kerusakan bukan disebabkan oleh kelalaian praktikan, sebaiknya segera jelaskan
         kronologi kejadian kepada asisten laboratorium agar dapat dilakukan pengecekan lebih lanjut
         terkait penyebab kerusakan alat tersebut.
-    """,
+    """).strip(),
 
-    "lab_default": """
+    "lab_default": dedent("""
         Peminjaman alat laboratorium harus mengikuti
         prosedur dan ketentuan yang berlaku.
-    """,
+    """).strip(),
 
     # ================= KELULUSAN =================
 
-    "kelulusan_matkul": """
+    "kelulusan_matkul": dedent("""
         Praktikum dan mata kuliah teori di Informatika UAD saling berkaitan.
 
         Praktikum dibuat untuk membantu mahasiswa memahami dan menerapkan materi yang sudah
@@ -403,9 +405,9 @@ RESPONSES = {
 
         Jadi, pastikan kamu memahami materi teori dengan baik karena hal tersebut juga akan
         membantu proses praktikum berjalan lebih lancar.
-    """,
+    """).strip(),
 
-    "kelulusan_syarat": """
+    "kelulusan_syarat": dedent("""
         Untuk lulus praktikum, mahasiswa biasanya harus memenuhi beberapa ketentuan yang
         telah ditetapkan oleh laboratorium atau mata kuliah terkait.
 
@@ -420,19 +422,19 @@ RESPONSES = {
 
         Pada beberapa praktikum tertentu, mahasiswa juga diwajibkan lulus mata kuliah terkait
         terlebih dahulu sebelum dapat mengikuti atau menyelesaikan praktikum lanjutan.
-    """,
+    """).strip(),
 
-    "kelulusan_default": """
+    "kelulusan_default": dedent("""
         Kelulusan praktikum ditentukan berdasarkan
         ketentuan nilai dan kehadiran praktikum.
-    """,
+    """).strip(),
 
     # ================= DEFAULT =================
 
-    "default": """
+    "default": dedent("""
         Maaf, saya belum memahami pertanyaan Anda.
         Silakan gunakan pertanyaan yang lebih spesifik.
-    """
+    """).strip()
 }
 
 

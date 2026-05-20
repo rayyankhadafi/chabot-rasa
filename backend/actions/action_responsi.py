@@ -2,6 +2,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
 import textwrap
+from textwrap import dedent
 
 
 # =========================================================
@@ -24,23 +25,23 @@ RESPONSES = {
 
     # ================= NILAI =================
 
-    "nilai_tidak_sesuai": """
+    "nilai_tidak_sesuai": dedent("""
         Jika nilai responsi tidak sesuai, silakan hubungi asisten praktikum terkait.
         Nantinya akan dilakukan pengecekan ulang, dan jika terjadi kesalahan input maka nilai
         dapat diperbaiki.
-    """,
+    """).strip(),
 
-    "nilai_perbaikan": """
+    "nilai_perbaikan": dedent("""
         Nilai responsi biasanya masih dapat diperbaiki melalui praktikum ulang atau remedial
         sesuai kebijakan laboratorium.
-    """,
+    """).strip(),
 
-    "nilai_minimal": """
+    "nilai_minimal": dedent("""
         Nilai minimal kelulusan praktikum umumnya adalah C.
         Namun ketentuan dapat berbeda tergantung kebijakan mata kuliah.
-    """,
+    """).strip(),
 
-    "nilai_perbandingan": """
+    "nilai_perbandingan": dedent("""
         Nilai responsi berbeda dengan nilai mata kuliah teori.
         Nilai responsi merupakan bagian dari penilaian praktikum.
         
@@ -48,40 +49,40 @@ RESPONSES = {
         komponen penilaian mata kuliah.
         Karena itu, jika nilai praktikum atau responsi kurang baik, hal tersebut 
         dapat mempengaruhi nilai akhir mata kuliah.
-    """,
+    """).strip(),
 
-    "nilai_komputer": """
+    "nilai_komputer": dedent("""
         Jika terjadi kendala komputer saat responsi, segera laporkan kepada asisten praktikum.
         Biasanya akan diberikan solusi seperti pergantian perangkat atau tambahan waktu.
-    """,
+    """).strip(),
 
-    "nilai_tidak_masuk": """
+    "nilai_tidak_masuk": dedent("""
         Jika nilai responsi kamu belum muncul pada hasil penilaian, silakan hubungi asisten
         praktikum untuk dilakukan pengecekan lebih lanjut. 
         Setelah proses pengecekan selesai, nilai akan diperbarui atau ditampilkan sesuai data
         yang telah diverifikasi.
-    """,
+    """).strip(),
 
-    "nilai_penting": """
+    "nilai_penting": dedent("""
         Nilai responsi merupakan salah satu komponen penting dalam penilaian mata kuliah praktikum.
         Jika nilai responsi kosong atau bernilai 0, hal tersebut dapat mempengaruhi nilai akhir
         mata kuliah dan membuat hasil akhir menjadi lebih rendah.
 
         Karena itu, pastikan kamu mengikuti responsi dan menyelesaikannya dengan baik.
-    """,
+    """).strip(),
 
-    "nilai_default": """
+    "nilai_default": dedent("""
         Nilai responsi merupakan hasil evaluasi kegiatan praktikum mahasiswa.
-    """,
+    """).strip(),
 
     # ================= JADWAL =================
 
-    "jadwal_kapan": """
+    "jadwal_kapan": dedent("""
         Jadwal responsi biasanya diumumkan oleh asisten praktikum menjelang akhir semester.
         Pastikan tetap memantau informasi dari asisten atau koordinator praktikum.
-    """,
+    """).strip(),
 
-    "jadwal_berubah": """
+    "jadwal_berubah": dedent("""
         Jadwal responsi dapat berubah sewaktu-waktu sesuai ketentuan laboratorium.
 
         Oleh karena itu, pastikan kamu selalu memantau:
@@ -90,17 +91,17 @@ RESPONSES = {
         -Website TIF UAD
 
         agar tidak ketinggalan informasi terbaru terkait perubahan jadwal responsi.
-    """,
+    """).strip(),
 
-    "jadwal_default": """
+    "jadwal_default": dedent("""
         Informasi mengenai jadwal responsi dapat ditanyakan langsung kepada asisten praktikum.
         Selain itu, kamu juga dapat memantau grup praktikum atau informasi resmi dari web tif
         laboratorium untuk mendapatkan update terbaru.
-    """,
+    """).strip(),
 
     # ================= MEKANISME =================
 
-    "mekanisme_umum": """
+    "mekanisme_umum": dedent("""
         Responsi praktikum biasanya dilaksanakan di akhir semester sebagai bagian dari evaluasi
         akhir praktikum.
         Responsi dapat dilaksanakan secara offline menggunakan komputer di laboratorium maupun
@@ -114,53 +115,53 @@ RESPONSES = {
 
         Selama responsi berlangsung, mahasiswa wajib mematuhi tata tertib laboratorium dan
         mengerjakan soal secara mandiri.
-    """,
+    """).strip(),
 
-    "mekanisme_kertas": """
+    "mekanisme_kertas": dedent("""
         Responsi biasanya terdiri dari teori dan praktik.
         - Praktik menggunakan komputer laboratorium
         - Teori menggunakan kertas tulis
-    """,
+    """).strip(),
 
-    "mekanisme_kelompok": """
+    "mekanisme_kelompok": dedent("""
         Responsi umumnya dilaksanakan secara individu.
         Namun, pada kondisi atau mata kuliah tertentu, responsi dapat dilakukan secara kelompok
         sesuai ketentuan dari asisten atau koordinator praktikum.
-    """,
+    """).strip(),
 
-    "mekanisme_soal": """
+    "mekanisme_soal": dedent("""
         Format soal responsi dapat berupa teori,
         praktik coding, analisis program, maupun studi kasus.
-    """,
+    """).strip(),
 
-    "mekanisme_inhal": """
+    "mekanisme_inhal": dedent("""
         Responsi susulan (inhal) biasanya diperbolehkan
         jika memiliki alasan yang sah seperti sakit atau musibah.
-    """,
+    """).strip(),
 
-    "mekanisme_online": """
+    "mekanisme_online": dedent("""
         Beberapa praktikum dapat melaksanakan responsi secara online
         menggunakan platform seperti Google Meet atau Google Classroom.
-    """,
+    """).strip(),
 
-    "mekanisme_browser": """
+    "mekanisme_browser": dedent("""
         Penggunaan browser tergantung kebijakan praktikum.
         Akses di luar kebutuhan praktikum biasanya tidak diperbolehkan.
-    """,
+    """).strip(),
 
-    "mekanisme_alat": """
+    "mekanisme_alat": dedent("""
         Jika mengalami kendala alat atau komputer,
         segera laporkan kepada asisten praktikum.
-    """,
+    """).strip(),
 
-    "mekanisme_default": """
+    "mekanisme_default": dedent("""
         Responsi dilaksanakan sebagai evaluasi akhir praktikum
         dalam bentuk teori maupun praktik.
-    """,
+    """).strip(),
 
     # ================= KEHADIRAN =================
 
-    "kehadiran_tidak_hadir": """
+    "kehadiran_tidak_hadir": dedent("""
         Jika kamu tidak dapat hadir responsi karena alasan yang valid,
         seperti sakit, musibah, atau keperluan mendesak lainnya,
         biasanya kamu dapat mengajukan responsi susulan setelah mendapat
@@ -168,79 +169,79 @@ RESPONSES = {
 
         Namun, jika tidak hadir tanpa alasan yang sah,
         nilai responsi dapat menjadi 0.
-    """,
+    """).strip(),
 
-    "kehadiran_minimal": """
+    "kehadiran_minimal": dedent("""
         Mahasiswa harus memenuhi minimal 11 praktikum (80%) atau batas tidak hadir
         (inhal) 3 kali kehadiran praktikum agar dapat mengikuti responsi.
-    """,
+    """).strip(),
 
-    "kehadiran_wajib": """
+    "kehadiran_wajib": dedent("""
         Ya, responsi praktikum umumnya bersifat wajib karena akan mempengaruhi nilai akhir
         bagi mahasiswa yang mengambil praktikum tersebut.
-    """,
+    """).strip(),
 
-    "kehadiran_default": """
+    "kehadiran_default": dedent("""
         Kehadiran praktikum menjadi salah satu syarat mengikuti responsi.
-    """,
+    """).strip(),
 
     # ================= SANKSI =================
 
-    "sanksi_mencontek": """
+    "sanksi_mencontek": dedent("""
         Mahasiswa yang terbukti mencontek saat responsi
         dapat dikenakan nilai 0 atau dinyatakan tidak lulus praktikum.
-    """,
+    """).strip(),
 
-    "sanksi_lapor": """
+    "sanksi_lapor": dedent("""
         Jika menemukan tindakan mencontek,
         kamu dapat melaporkannya kepada asisten praktikum.
-    """,
+    """).strip(),
 
-    "sanksi_tanya_teman": """
+    "sanksi_tanya_teman": dedent("""
         Peserta diharapkan mengerjakan responsi secara mandiri
         dan tidak bertanya kepada teman.
-    """,
+    """).strip(),
 
-    "sanksi_ulang": """
+    "sanksi_ulang": dedent("""
         Responsi ulang dapat diajukan
         jika memiliki alasan dan bukti yang valid.
-    """,
+    """).strip(),
 
-    "sanksi_telat": """
+    "sanksi_telat": dedent("""
         Mahasiswa biasanya tidak dikenakan denda,
         namun tetap harus mengikuti aturan laboratorium.
-    """,
+    """).strip(),
 
-    "sanksi_default": """
+    "sanksi_default": dedent("""
         Pelanggaran aturan responsi dapat dikenakan sanksi
         sesuai ketentuan laboratorium.
-    """,
+    """).strip(),
 
     # ================= SUSULAN =================
 
-    "susulan": """
+    "susulan": dedent("""
         Responsi susulan dapat diajukan
         jika memiliki alasan yang sah dan disetujui laboratorium.
-    """,
+    """).strip(),
 
     # ================= ATURAN =================
 
-    "aturan_telat": """
+    "aturan_telat": dedent("""
         Mahasiswa yang terlambat biasanya masih diberikan toleransi,
         namun jika melewati batas maka dapat dianggap tidak hadir.
-    """,
+    """).strip(),
 
-    "aturan_catatan": """
+    "aturan_catatan": dedent("""
         Mahasiswa umumnya tidak diperbolehkan membawa catatan,
         kecuali diizinkan oleh asisten praktikum.
-    """,
+    """).strip(),
 
-    "aturan_hp": """
+    "aturan_hp": dedent("""
         Penggunaan HP saat responsi umumnya tidak diperbolehkan,
         kecuali untuk keperluan tertentu yang telah diizinkan.
-    """,
+    """).strip(),
 
-    "aturan_default": """
+    "aturan_default": dedent("""
         Berikut beberapa aturan umum saat mengikuti responsi praktikum di Informatika UAD:
 
         -Hadir tepat waktu dengan toleransi keterlambatan maksimal 15 menit
@@ -255,28 +256,28 @@ RESPONSES = {
 
         Pastikan kamu selalu mengikuti arahan dari asisten praktikum agar responsi berjalan dengan
         lancar.
-    """,
+    """).strip(),
 
     # ================= PENGERTIAN =================
 
-    "pengertian": """
+    "pengertian": dedent("""
         Responsi adalah ujian evaluasi akhir praktikum
         untuk mengukur pemahaman mahasiswa terhadap materi praktikum.
-    """,
+    """).strip(),
 
     # ================= BIAYA =================
 
-    "biaya": """
+    "biaya": dedent("""
         Mahasiswa umumnya tidak dikenakan biaya tambahan
         untuk mengikuti responsi praktikum.
-    """,
+    """).strip(),
 
     # ================= DEFAULT =================
 
-    "default": """
+    "default": dedent("""
         Maaf, saya belum memahami pertanyaan Anda.
         Silakan gunakan pertanyaan yang lebih spesifik.
-    """
+    """).strip()
 }
 
 
