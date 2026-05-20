@@ -579,7 +579,7 @@ class ActionHandlePraktikum(Action):
                 text=clean_response(RESPONSES["online_ai"])
             )
 
-        elif has_keyword(text, ["masalah", "bermasalah", "koneksi", "wifi"]):
+        elif has_keyword(text, ["bermasalah", "masalah", "koneksi", "wifi"]):
             dispatcher.utter_message(
                 text=clean_response(RESPONSES["online_masalah"])
             )
