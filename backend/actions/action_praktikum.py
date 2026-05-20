@@ -193,8 +193,8 @@ RESPONSES = {
 
     "nilai_matkul": """
         Nilai praktikum biasanya memiliki pengaruh yang cukup besar terhadap nilai akhir mata kuliah.
-        Pada beberapa mata kuliah, komponen praktikum dapat berkontribusi sekitar 20%-40% dari total 
-        nilai akhir, tergantung ketentuan pada RPS masing-masing mata kuliah.
+        Pada beberapa mata kuliah, komponen praktikum dapat berkontribusi sekitar 20%-40% dari
+        total nilai akhir, tergantung ketentuan pada RPS masing-masing mata kuliah.
 
         Selain itu, praktikum juga sering menjadi salah satu syarat kelulusan mata kuliah tertentu.
         Karena itu, pastikan kamu mengikuti praktikum dengan baik dan menjaga nilai tetap aman.
@@ -574,7 +574,7 @@ class ActionHandlePraktikum(Action):
 
     def handle_online(self, dispatcher, text):
 
-        if has_keyword(text, ["ai", "chatgpt", "internet", "browser", "google"]):
+        if has_keyword(text, ["ai", "chatgpt", "browser", "google"]):
             dispatcher.utter_message(
                 text=clean_response(RESPONSES["online_ai"])
             )
