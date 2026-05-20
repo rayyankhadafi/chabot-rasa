@@ -343,7 +343,7 @@ export function ChatSidebar({
                 <div className="flex items-center justify-between gap-2 min-w-0">
 
                   {/* LEFT */}
-                  <div className="flex items-center gap-2.5 flex-1 min-w-0">
+                  <div className="flex items-center gap-2.5 flex-1 min-w-0 overflow-hidden">
 
                     <MessageSquare
                       className={`
@@ -417,7 +417,7 @@ export function ChatSidebar({
                   </div>
                   {/* MENU */}
                   <div
-                    className="relative shrink-0 ml-1"
+                    className="relative shrink-0 flex-none"
                     >
 
                     <button
