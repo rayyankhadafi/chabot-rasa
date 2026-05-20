@@ -245,11 +245,7 @@ export function ChatInterface({
     text: string
   ) => {
 
-    setInput(text);
-
-    setTimeout(() => {
-      handleSend(text);
-    }, 50);
+    handleSend(text);
   };
 
   // =========================
