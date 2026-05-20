@@ -321,7 +321,6 @@ export function ChatSidebar({
                 }
                 className={`
                   w-full
-                  max-w-full
                   text-left
                   px-3
                   py-2.5
@@ -331,7 +330,6 @@ export function ChatSidebar({
                   duration-200
                   group
                   cursor-pointer
-                  relative
                   ${
                     activeChat === chat.id
                       ? 'bg-sidebar-accent text-sidebar-foreground'
@@ -365,7 +363,9 @@ export function ChatSidebar({
                         autoFocus
                         value={editedTitle}
                         onChange={(e) =>
-                          setEditedTitle(e.target.value)
+                          setEditedTitle(
+                            e.target.value
+                          )
                         }
                         onClick={(e) =>
                           e.stopPropagation()
@@ -379,14 +379,12 @@ export function ChatSidebar({
                           if (e.key === 'Escape') {
                             setEditingChatId(null);
                           }
-
                         }}
                         onBlur={() =>
                           handleRenameChat(chat.id)
                         }
                         className="
-                          flex-1
-                          min-w-0
+                          w-full
                           bg-transparent
                           outline-none
                           text-sidebar-foreground
@@ -396,28 +394,17 @@ export function ChatSidebar({
 
                     ) : (
 
-                      <div className="flex-1 min-w-0 overflow-hidden">
-
-                        <span
-                          title={chat.title}
-                          className="
-                            block
-                            w-full
-                            truncate
-                            text-left
-                          "
-                        >
-                          {chat.title}
-                        </span>
-
-                      </div>
+                      <span className="block flex-1 truncate leading-[1.4] text-left overflow-hidden">
+                        {chat.title}
+                      </span>
 
                     )}
 
                   </div>
+
                   {/* MENU */}
                   <div
-                    className="relative shrink-0 flex-none"
+                    className="relative shrink-0 ml-1"
                     >
 
                     <button
