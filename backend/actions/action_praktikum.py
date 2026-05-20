@@ -111,11 +111,11 @@ RESPONSES = {
         Pendaftaran praktikum dilakukan melalui sistem registrasi laboratorium (REGLAB)
         2. Tata Tertib Praktikum
         -Mahasiswa wajib hadir sesuai jadwal praktikum yang telah ditentukan
-        -Tidak diperbolehkan mengubah pengaturan software atau hardware komputer laboratorium tanpa izin
-         asisten atau laboran
+        -Tidak diperbolehkan mengubah pengaturan software atau hardware komputer laboratorium tanpa
+         izin asisten atau laboran
         -Praktikan harus menjaga ketertiban selama kegiatan praktikum berlangsung
-        -Orang yang tidak berkepentingan tidak diperbolehkan berada di ruang laboratorium saat praktikum
-         berlangsung
+        -Orang yang tidak berkepentingan tidak diperbolehkan berada di ruang laboratorium saat
+         praktikum berlangsung
         3. Sanksi Pelanggaran
         Pelanggaran tata tertib dapat dikenakan sanksi sesuai aturan laboratorium atau fakultas
 
@@ -126,15 +126,17 @@ RESPONSES = {
     # ================= KEHADIRAN =================
 
     "kehadiran_rules": """
-        Jika tidak dapat menghadiri praktikum, mahasiswa sebaiknya segera menghubungi asisten praktikum
-        dan memberikan alasan serta bukti yang jelas, seperti surat sakit, musibah, atau surat izin
-        dari kampus.
+        Jika tidak dapat menghadiri praktikum, mahasiswa sebaiknya segera menghubungi asisten
+        praktikum dan memberikan alasan serta bukti yang jelas, seperti surat sakit, musibah, atau
+        surat izin dari kampus.
+
         Jika alasan atau bukti yang diberikan tidak dapat diverifikasi, maka mahasiswa biasanya akan
         dianggap tidak hadir (alfa).
 
         Selain itu, toleransi keterlambatan praktikum umumnya maksimal 15 menit. Jika melebihi batas
         tersebut, mahasiswa biasanya tidak diperbolehkan mengikuti praktikum dan akan dianggap alfa,
         sehingga tidak mendapatkan nilai pada pertemuan tersebut.
+
         Namun, mahasiswa masih dapat mengikuti inhall sesuai ketentuan laboratorium untuk memperoleh
         nilai pengganti akibat ketidakhadiran praktikum.
 
@@ -144,14 +146,14 @@ RESPONSES = {
     "kehadiran_minimal": """
         Minimal kehadiran praktikum umumnya adalah 11 kali pertemuan.
 
-        Jika mahasiswa tidak memenuhi batas minimal kehadiran atau tidak hadir lebih dari 3 kali, maka
-        mahasiswacbiasanya akan dianggap tidak memenuhi syarat mengikuti praktikum atau responsi dan
-        tercatat alfa pada pertemuancyang ditinggalkan.
+        Jika mahasiswa tidak memenuhi batas minimal kehadiran atau tidak hadir lebih dari 3 kali,
+        maka mahasiswa biasanya akan dianggap tidak memenuhi syarat mengikuti praktikum atau
+        responsi dan tercatat alfa pada pertemuancyang ditinggalkan.
     """,
 
     "kehadiran_default": """
-        Mahasiswa wajib memenuhi minimal kehadiran praktikum agar tetap dapat mengikuti evaluasi akhir
-        dan responsi.
+        Mahasiswa wajib memenuhi minimal kehadiran praktikum agar tetap dapat mengikuti evaluasi
+        akhir dan responsi.
 
         Kehadiran praktikum juga menjadi salah satu komponen yang mempengaruhi nilai, jadi pastikan
         untuk selalu hadir pada setiap pertemuan praktikum.
@@ -184,8 +186,9 @@ RESPONSES = {
         Jika kamu mengganti atau pindah jadwal praktikum, biasanya data dan nilai praktikum juga akan 
         menyesuaikan dengan jadwal yang baru.
 
-        Namun, sebelum melakukan perpindahan jadwal, sebaiknya konfirmasikan terlebih dahulu kepada
-        asisten praktikum agar proses verifikasi data dan nilai dapat dilakukan dengan benar.
+        Namun, sebelum melakukan perpindahan jadwal, sebaiknya konfirmasikan terlebih dahulu
+        kepada asisten praktikum agar proses verifikasi data dan nilai dapat dilakukan dengan
+        benar.
     """,
 
     "nilai_matkul": """
@@ -200,8 +203,8 @@ RESPONSES = {
     "nilai_responsi": """
         Nilai praktikum dan nilai responsi merupakan komponen penilaian yang berbeda.
 
-        Nilai praktikum tidak secara langsung mempengaruhi nilai responsi, namun keduanya biasanya akan
-        digabung untuk menjadi nilai akhir praktikum atau mata kuliah terkait.
+        Nilai praktikum tidak secara langsung mempengaruhi nilai responsi, namun keduanya biasanya
+        akan digabung untuk menjadi nilai akhir praktikum atau mata kuliah terkait.
     """,
 
     "nilai_default": """
@@ -225,8 +228,8 @@ RESPONSES = {
     "peralatan_modul": """
         Mahasiswa biasanya tidak diwajibkan membawa modul atau catatan praktikum ke laboratorium.
 
-        Hal ini karena modul praktikum umumnya sudah tersedia pada komputer laboratorium atau dibagikan
-        secara digital oleh asisten praktikum.
+        Hal ini karena modul praktikum umumnya sudah tersedia pada komputer laboratorium atau
+        dibagikan secara digital oleh asisten praktikum.
     """,
 
     "peralatan_default": """
@@ -238,14 +241,15 @@ RESPONSES = {
     # ================= ONLINE =================
 
     "online_ai": """
-        Penggunaan AI seperti ChatGPT biasanya tidak diperbolehkan saat praktikum atau post-test
-        berlangsung.
+        Penggunaan AI seperti ChatGPT biasanya tidak diperbolehkan saat praktikum atau
+        post-test berlangsung.
 
-        Namun, penggunaan browser untuk kebutuhan praktikum, seperti membuka dokumentasi atau localhost,
-        umumnya masih diperbolehkan sesuai ketentuan laboratorium.
+        Namun, penggunaan browser untuk kebutuhan praktikum, seperti membuka dokumentasi atau
+        localhost, umumnya masih diperbolehkan sesuai ketentuan laboratorium.
 
         Karena itu, pastikan kamu bertanya terlebih dahulu kepada asisten laboratorium sebelum
-        menggunakan tools tertentu agar tidak dianggap melakukan kecurangan saat praktikum berlangsung.
+        menggunakan tools tertentu agar tidak dianggap melakukan kecurangan saat praktikum
+        berlangsung.
     """,
 
     "online_aturan":"""
@@ -271,8 +275,8 @@ RESPONSES = {
         Beberapa praktikum dapat dilaksanakan secara online sesuai ketentuan mata kuliah atau
         laboratorium.
 
-        Karena itu, mahasiswa disarankan memiliki atau menyiapkan laptop pribadi agar dapat mengikuti
-        praktikum online dengan lancar.
+        Karena itu, mahasiswa disarankan memiliki atau menyiapkan laptop pribadi agar dapat
+        mengikuti praktikum online dengan lancar.
     """,
 
     # ================= PENDAFTARAN =================
@@ -289,11 +293,11 @@ RESPONSES = {
         5. Setelah akun aktif, mahasiswa dapat memilih jadwal atau slot praktikum yang tersedia
 
         Jika terlambat mendaftar praktikum, mahasiswa dapat menghubungi asisten praktikum atau
-        laboratorium untuk menanyakan kemungkinan pendaftaran susulan atau mendaftar secara manual dengan
-        laboran.
+        laboratorium untuk menanyakan kemungkinan pendaftaran susulan atau mendaftar secara manual
+        dengan laboran.
 
-        Pastikan data yang dimasukkan sudah benar dan selalu pantau informasi terbaru dari laboratorium
-        agar tidak melewatkan jadwal pendaftaran.
+        Pastikan data yang dimasukkan sudah benar dan selalu pantau informasi terbaru dari
+        laboratorium agar tidak melewatkan jadwal pendaftaran.
 
     """,
 
@@ -308,11 +312,12 @@ RESPONSES = {
         praktikum dimulai.
 
         Umumnya, pendaftaran praktikum berlangsung selama 1-2 minggu setelah perkuliahan dimulai.
-        Untuk semester gasal, pendaftaran biasanya ditutup pada minggu kedua atau ketiga bulan September,
-        sedangkan semester genap umumnya ditutup pada minggu kedua atau ketiga bulan Maret.
+        Untuk semester gasal, pendaftaran biasanya ditutup pada minggu kedua atau ketiga bulan
+        September, sedangkan semester genap umumnya ditutup pada minggu kedua atau ketiga bulan
+        Maret.
 
-        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan jadwal
-        pendaftaran.
+        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan
+        jadwal pendaftaran.
     """,
 
     "pendaftaran_syarat": """
@@ -323,10 +328,11 @@ RESPONSES = {
     """,
 
     "pendaftaran_slot": """
-        Kuota praktikum biasanya terbatas sesuai kapasitas laboratorium dan jumlah asisten praktikum.
+        Kuota praktikum biasanya terbatas sesuai kapasitas laboratorium dan jumlah asisten
+        praktikum.
 
-        Jika slot praktikum sudah penuh, mahasiswa dapat menghubungi pihak laboratorium atau menunggu
-        informasi mengenai pembukaan slot tambahan.
+        Jika slot praktikum sudah penuh, mahasiswa dapat menghubungi pihak laboratorium atau
+        menunggu informasi mengenai pembukaan slot tambahan.
     """,
 
     "pendaftaran_bayar": """
@@ -387,14 +393,14 @@ RESPONSES = {
         Praktikum dibuat untuk membantu mahasiswa memahami dan menerapkan materi yang sudah
         dipelajari saat perkuliahan teori.
 
-        Karena itu, beberapa praktikum biasanya memiliki mata kuliah prasyarat yang harus sudah lulus
-        terlebih dahulu sebelum mahasiswa dapat mengikuti atau lulus praktikum tersebut.
+        Karena itu, beberapa praktikum biasanya memiliki mata kuliah prasyarat yang harus sudah
+        lulus terlebih dahulu sebelum mahasiswa dapat mengikuti atau lulus praktikum tersebut.
 
-        Umumnya, mahasiswa diwajibkan memperoleh nilai minimal tertentu pada mata kuliah terkait agar
-        dapat mengambil praktikum lanjutan.
+        Umumnya, mahasiswa diwajibkan memperoleh nilai minimal tertentu pada mata kuliah terkait
+        agar dapat mengambil praktikum lanjutan.
 
-        Jadi, pastikan kamu memahami materi teori dengan baik karena hal tersebut juga akan membantu
-        proses praktikum berjalan lebih lancar.
+        Jadi, pastikan kamu memahami materi teori dengan baik karena hal tersebut juga akan
+        membantu proses praktikum berjalan lebih lancar.
     """,
 
     "kelulusan_syarat": """
@@ -407,11 +413,11 @@ RESPONSES = {
         - Mengikuti serta menyelesaikan ujian atau responsi praktikum
         - Memenuhi standar nilai yang telah ditentukan laboratorium
 
-        Jika belum lulus praktikum, mahasiswa biasanya dapat mendaftar ulang pada semester berikutnya
-        sesuai ketentuan yang berlaku.
+        Jika belum lulus praktikum, mahasiswa biasanya dapat mendaftar ulang pada semester
+        berikutnya sesuai ketentuan yang berlaku.
 
-        Pada beberapa praktikum tertentu, mahasiswa juga diwajibkan lulus mata kuliah terkait terlebih
-        dahulu sebelum dapat mengikuti atau menyelesaikan praktikum lanjutan.
+        Pada beberapa praktikum tertentu, mahasiswa juga diwajibkan lulus mata kuliah terkait
+        terlebih dahulu sebelum dapat mengikuti atau menyelesaikan praktikum lanjutan.
     """,
 
     "kelulusan_default": """
