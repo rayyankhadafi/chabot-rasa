@@ -322,7 +322,6 @@ export function ChatSidebar({
                 className={`
                   w-full
                   max-w-full
-                  overflow-hidden
                   text-left
                   px-3
                   py-2.5
@@ -332,6 +331,7 @@ export function ChatSidebar({
                   duration-200
                   group
                   cursor-pointer
+                  relative
                   ${
                     activeChat === chat.id
                       ? 'bg-sidebar-accent text-sidebar-foreground'
