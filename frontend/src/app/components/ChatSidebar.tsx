@@ -384,7 +384,8 @@ export function ChatSidebar({
                           handleRenameChat(chat.id)
                         }
                         className="
-                          w-full
+                          flex-1
+                          min-w-0
                           bg-transparent
                           outline-none
                           text-sidebar-foreground
@@ -394,9 +395,19 @@ export function ChatSidebar({
 
                     ) : (
 
-                      <span className="block flex-1 truncate leading-[1.4] text-left overflow-hidden">
-                        {chat.title}
-                      </span>
+                        <div className="flex-1 min-w-0">
+
+                          <span className="
+                            block
+                            truncate
+                            whitespace-nowrap
+                            overflow-hidden
+                            text-ellipsis
+                          ">
+                            {chat.title}
+                          </span>
+
+                        </div>
 
                     )}
 
