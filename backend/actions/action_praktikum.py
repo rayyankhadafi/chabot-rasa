@@ -31,40 +31,42 @@ RESPONSES = {
 
         Ketentuan inhal umumnya:
         - Biaya inhal sekitar Rp25.000 per pertemuan
-        - Mahasiswa dengan izin resmi, seperti sakit atau musibah, biasanya dapat mengikuti inhal tanpa
-          biaya
+        - Mahasiswa dengan izin resmi, seperti sakit atau musibah, biasanya dapat mengikuti inhal
+           tanpa biaya
 
         Prosedur pembayaran inhal:
         - Hubungi Pak Agung Purnomo melalui WhatsApp
         - Lakukan pendataan dan pembayaran sesuai arahan
         - Kirim bukti transfer untuk verifikasi
         - Setelah terverifikasi, mahasiswa dapat mengikuti inhal sesuai jadwal dari asisten praktikum
+
+        Jika kamu inhal lebih dari 3 kali atau maksimal batas hadir, maka praktikum tersebut
+        otomatis gagal, artinya kamu tidak mendapat nilai dari praktikum tersebut.
     """,
 
     "inhal_default": """
-        Untuk informasi dan ketentuan inhal praktikum, kamu dapat menanyakannya langsung kepada asisten
-        praktikum atau laboran.
-
-        Dengan begitu, kamu bisa mendapatkan informasi yang lebih jelas mengenai syarat, jadwal, dan
-        prosedur mengikuti inhal.
+        Untuk informasi dan ketentuan inhal praktikum, kamu dapat menanyakannya langsung kepada
+        asisten praktikum atau laboran.
+        
+        Dengan begitu, kamu bisa mendapatkan informasi yang lebih jelas mengenai syarat, jadwal,
+        dan prosedur mengikuti inhal.
     """,
 
     # ================= JADWAL =================
 
     "jadwal_pindah": """
-        Pindah atau mengubah jadwal praktikum biasanya dapat dilakukan, terutama jika terdapat bentrok
-        dengan jadwal kuliah atau praktikum lain.
+        Pindah atau mengubah jadwal praktikum biasanya dapat dilakukan, terutama jika terdapat
+        bentrok dengan jadwal kuliah atau praktikum lain.
 
         Berikut beberapa ketentuan umum terkait pindah jadwal praktikum:
         - Mahasiswa sudah terdaftar pada salah satu slot praktikum
         - Perpindahan jadwal biasanya dilakukan setelah masa pemilihan slot selesai
         - Pengajuan pindah jadwal dapat dilakukan melalui laboran atau sistem registrasi laboratorium
         - Informasi dan jadwal layanan bentrok biasanya diumumkan melalui website atau Grup Whatsapp
-        dan Telegram resmi laboratorium
+           dan Telegram resmi laboratorium
 
-        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan jadwal
-        pengajuan pindah slot praktikum.
-    """,
+        Pastikan kamu selalu memantau informasi terbaru dari laboratorium agar tidak melewatkan 
+        jadwal pengajuan pindah slot praktikum.""",
 
     "jadwal_default": """
         Jadwal praktikum biasanya diumumkan oleh asisten praktikum
@@ -112,10 +114,10 @@ RESPONSES = {
         2. Tata Tertib Praktikum
         -Mahasiswa wajib hadir sesuai jadwal praktikum yang telah ditentukan
         -Tidak diperbolehkan mengubah pengaturan software atau hardware komputer laboratorium tanpa
-         izin asisten atau laboran
+          izin asisten atau laboran
         -Praktikan harus menjaga ketertiban selama kegiatan praktikum berlangsung
         -Orang yang tidak berkepentingan tidak diperbolehkan berada di ruang laboratorium saat
-         praktikum berlangsung
+          praktikum berlangsung
         3. Sanksi Pelanggaran
         Pelanggaran tata tertib dapat dikenakan sanksi sesuai aturan laboratorium atau fakultas
 
@@ -261,13 +263,13 @@ RESPONSES = {
         5. Menjaga etika dan ketertiban saat sesi online.
         6. Mengumpulkan tugas atau laporan sesuai format dan batas waktu.
         7. Tidak melakukan kecurangan, termasuk menyalin pekerjaan teman atau menggunakan AI
-           seperti ChatGPT tanpa izin jika tidak diperbolehkan.
+            seperti ChatGPT tanpa izin jika tidak diperbolehkan.
         8. Tetap aktif dan tidak meninggalkan sesi tanpa izin.
 
     """,
 
     "online_masalah": """
-        Jika mengalami kendala internet saat praktikum online,
+        Jika mengalami kendala internet saat praktikum online atau offline,
         segera informasikan kepada asisten praktikum.
     """,
 
@@ -293,8 +295,8 @@ RESPONSES = {
         5. Setelah akun aktif, mahasiswa dapat memilih jadwal atau slot praktikum yang tersedia
 
         Jika terlambat mendaftar praktikum, mahasiswa dapat menghubungi asisten praktikum atau
-        laboratorium untuk menanyakan kemungkinan pendaftaran susulan atau mendaftar secara manual
-        dengan laboran.
+        laboratorium untuk menanyakan kemungkinan pendaftaran susulan atau mendaftar secara
+        manual dengan laboran.
 
         Pastikan data yang dimasukkan sudah benar dan selalu pantau informasi terbaru dari
         laboratorium agar tidak melewatkan jadwal pendaftaran.

@@ -245,13 +245,13 @@ RESPONSES = {
 
         -Hadir tepat waktu dengan toleransi keterlambatan maksimal 15 menit
         -Jika terlambat melebihi batas, mahasiswa biasanya tidak diperbolehkan mengikuti responsi
-         dan nilai dapat menjadi 0
+          dan nilai dapat menjadi 0
         -Responsi umumnya dilaksanakan secara offline di laboratorium pada akhir periode praktikum
         -Waktu responsi biasanya terdiri dari sesi persiapan, pengerjaan soal, dan penutupan
         -Mahasiswa wajib berpakaian rapi dan menjaga ketertiban selama di laboratorium
         -Tidak diperbolehkan membawa makanan atau minuman ke dalam ruang laboratorium
         -Dilarang mengubah pengaturan komputer atau melepas perangkat laboratorium tanpa izin
-         asisten
+          asisten
 
         Pastikan kamu selalu mengikuti arahan dari asisten praktikum agar responsi berjalan dengan
         lancar.
