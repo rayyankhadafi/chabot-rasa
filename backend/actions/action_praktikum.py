@@ -260,8 +260,8 @@ RESPONSES = {
         4. Mengikuti instruksi dosen atau asisten laboratorium selama praktikum berlangsung.
         5. Menjaga etika dan ketertiban saat sesi online.
         6. Mengumpulkan tugas atau laporan sesuai format dan batas waktu.
-        7. Tidak melakukan kecurangan, termasuk menyalin pekerjaan teman atau menggunakan AI seperti
-           ChatGPT tanpa izin jika tidak diperbolehkan.
+        7. Tidak melakukan kecurangan, termasuk menyalin pekerjaan teman atau menggunakan AI
+           seperti ChatGPT tanpa izin jika tidak diperbolehkan.
         8. Tetap aktif dan tidak meninggalkan sesi tanpa izin.
 
     """,
@@ -282,8 +282,8 @@ RESPONSES = {
     # ================= PENDAFTARAN =================
 
     "pendaftaran_mekanisme": """
-        Pendaftaran praktikum biasanya dilakukan pada awal semester dan dilaksanakan secara online
-        melalui sistem registrasi laboratorium.
+        Pendaftaran praktikum biasanya dilakukan pada awal semester dan dilaksanakan secara
+        online melalui sistem registrasi laboratorium.
 
         Berikut tahapan pendaftaran praktikum yang biasanya dilakukan:
         1. Melakukan registrasi akun pada sistem laboratorium
@@ -308,8 +308,8 @@ RESPONSES = {
     """,
 
     "pendaftaran_jadwal": """
-        Jadwal pendaftaran praktikum biasanya diumumkan sebelum awal semester atau sebelum kegiatan
-        praktikum dimulai.
+        Jadwal pendaftaran praktikum biasanya diumumkan sebelum awal semester atau sebelum
+        kegiatan praktikum dimulai.
 
         Umumnya, pendaftaran praktikum berlangsung selama 1-2 minggu setelah perkuliahan dimulai.
         Untuk semester gasal, pendaftaran biasanya ditutup pada minggu kedua atau ketiga bulan
@@ -404,8 +404,8 @@ RESPONSES = {
     """,
 
     "kelulusan_syarat": """
-        Untuk lulus praktikum, mahasiswa biasanya harus memenuhi beberapa ketentuan yang telah
-        ditetapkan oleh laboratorium atau mata kuliah terkait.
+        Untuk lulus praktikum, mahasiswa biasanya harus memenuhi beberapa ketentuan yang
+        telah ditetapkan oleh laboratorium atau mata kuliah terkait.
 
         Beberapa syarat umum kelulusan praktikum meliputi:
         - Mengikuti praktikum sesuai jadwal dan memenuhi minimal kehadiran
