@@ -574,7 +574,7 @@ class ActionHandlePraktikum(Action):
 
     def handle_online(self, dispatcher, text):
 
-        if has_keyword(text, ["ai", "chatgpt", "browser", "google"]):
+        if has_keyword(text, ["chatgpt", "browser", "google"]):
             dispatcher.utter_message(
                 text=clean_response(RESPONSES["online_ai"])
             )
