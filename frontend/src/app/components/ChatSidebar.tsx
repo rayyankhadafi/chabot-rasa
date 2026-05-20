@@ -321,6 +321,8 @@ export function ChatSidebar({
                 }
                 className={`
                   w-full
+                  max-w-full
+                  overflow-hidden
                   text-left
                   px-3
                   py-2.5
@@ -341,7 +343,7 @@ export function ChatSidebar({
                 <div className="flex items-center justify-between gap-2 min-w-0">
 
                   {/* LEFT */}
-                  <div className="flex items-center gap-2.5 flex-1 min-w-0 overflow-hidden">
+                  <div className="flex items-center gap-2.5 flex-1 min-w-0">
 
                     <MessageSquare
                       className={`
@@ -363,9 +365,7 @@ export function ChatSidebar({
                         autoFocus
                         value={editedTitle}
                         onChange={(e) =>
-                          setEditedTitle(
-                            e.target.value
-                          )
+                          setEditedTitle(e.target.value)
                         }
                         onClick={(e) =>
                           e.stopPropagation()
@@ -379,6 +379,7 @@ export function ChatSidebar({
                           if (e.key === 'Escape') {
                             setEditingChatId(null);
                           }
+
                         }}
                         onBlur={() =>
                           handleRenameChat(chat.id)
@@ -395,24 +396,25 @@ export function ChatSidebar({
 
                     ) : (
 
-                        <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 overflow-hidden">
 
-                          <span className="
+                        <span
+                          title={chat.title}
+                          className="
                             block
+                            w-full
                             truncate
-                            whitespace-nowrap
-                            overflow-hidden
-                            text-ellipsis
-                          ">
-                            {chat.title}
-                          </span>
+                            text-left
+                          "
+                        >
+                          {chat.title}
+                        </span>
 
-                        </div>
+                      </div>
 
                     )}
 
                   </div>
-
                   {/* MENU */}
                   <div
                     className="relative shrink-0 ml-1"
