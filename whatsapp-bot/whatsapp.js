@@ -7,6 +7,8 @@ const {Client, LocalAuth} = require("whatsapp-web.js");
 const client = new Client({
   authStrategy: new LocalAuth({
     clientId: "railway-whatsapp",
+
+    dataPath: "/app/.wwebjs_auth",
   }),
 
   puppeteer: {
@@ -24,6 +26,8 @@ const client = new Client({
       "--disable-gpu",
 
       "--single-process",
+      
+      "--no-zygote",
     ],
   },
 });
