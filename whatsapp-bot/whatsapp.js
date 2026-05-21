@@ -1,8 +1,38 @@
-const QRCode = require("qrcode");
+const qrcode = require("qrcode-terminal");
 
 const axios = require("axios");
 
+const express = require("express");
+
 const {Client, LocalAuth} = require("whatsapp-web.js");
+
+// =====================
+// EXPRESS HEALTH CHECK
+// =====================
+
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get(
+  "/",
+
+  (req, res) => {
+    res.send("WhatsApp bot running");
+  },
+);
+
+app.listen(
+  PORT,
+
+  () => {
+    console.log(`Server running on ${PORT}`);
+  },
+);
+
+// =====================
+// WHATSAPP CLIENT
+// =====================
 
 const client = new Client({
   authStrategy: new LocalAuth({
@@ -26,7 +56,7 @@ const client = new Client({
       "--disable-gpu",
 
       "--single-process",
-      
+
       "--no-zygote",
     ],
   },
@@ -39,14 +69,16 @@ const client = new Client({
 client.on(
   "qr",
 
-  async (qr) => {
-    console.log("QR received");
+  (qr) => {
+    qrcode.generate(
+      qr,
 
-    const url = await QRCode.toDataURL(qr);
+      {
+        small: true,
+      },
+    );
 
-    console.log("Open this QR:");
-
-    console.log(url);
+    console.log("Scan QR WhatsApp");
   },
 );
 
@@ -54,25 +86,37 @@ client.on(
 // READY
 // =====================
 
-client.on("ready", () => {
-  console.log("WhatsApp Bot Ready!");
-});
+client.on(
+  "ready",
+
+  () => {
+    console.log("WhatsApp Bot Ready!");
+  },
+);
 
 // =====================
 // AUTH SUCCESS
 // =====================
 
-client.on("authenticated", () => {
-  console.log("WhatsApp authenticated");
-});
+client.on(
+  "authenticated",
+
+  () => {
+    console.log("WhatsApp authenticated");
+  },
+);
 
 // =====================
 // AUTH FAILED
 // =====================
 
-client.on("auth_failure", (msg) => {
-  console.log("Auth failed:", msg);
-});
+client.on(
+  "auth_failure",
+
+  (msg) => {
+    console.log("Auth failed:", msg);
+  },
+);
 
 // =====================
 // DISCONNECTED
@@ -87,10 +131,8 @@ client.on(
     try {
       await client.destroy();
     } catch (err) {
-      console.log("Destroy error:", err.message);
+      console.log(err.message);
     }
-
-    console.log("Reconnecting in 5s...");
 
     setTimeout(() => {
       client.initialize();
@@ -107,7 +149,6 @@ client.on(
 
   async (message) => {
     try {
-      // abaikan pesan bot sendiri
       if (message.fromMe) {
         return;
       }
@@ -130,28 +171,28 @@ client.on(
         }
       }
     } catch (error) {
-      console.log("Message Error:", error.message);
+      console.log(error.message);
     }
   },
 );
 
 // =====================
-// GLOBAL ERROR
+// ERROR HANDLER
 // =====================
 
 process.on(
   "unhandledRejection",
 
-  (error) => {
-    console.log("Unhandled:", error);
+  (err) => {
+    console.log(err);
   },
 );
 
 process.on(
   "uncaughtException",
 
-  (error) => {
-    console.log("Exception:", error);
+  (err) => {
+    console.log(err);
   },
 );
 

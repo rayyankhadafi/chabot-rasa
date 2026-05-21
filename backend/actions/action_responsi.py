@@ -140,8 +140,18 @@ RESPONSES = {
     """).strip(),
 
     "mekanisme_online": dedent("""
-        Beberapa praktikum dapat melaksanakan responsi secara online
-        menggunakan platform seperti Google Meet atau Google Classroom.
+        Beberapa praktikum dapat melaksanakan responsi secara online menggunakan platform
+        seperti Google Meet atau Google Classroom.
+
+        Hal yang biasanya perlu dipersiapkan sebelum responsi online:
+        -Laptop atau komputer pribadi
+        -Koneksi internet yang stabil
+        -Lembar kertas atau perlengkapan praktikum yang diperlukan
+        -Mengumpulkan jawaban sesuai batas waktu yang ditentukan
+        -Mengikuti responsi secara jujur dan tidak bekerja sama dengan teman
+
+        Pastikan kamu mengikuti seluruh arahan dari asisten praktikum agar responsi online
+        dapat berjalan dengan lancar.
     """).strip(),
 
     "mekanisme_browser": dedent("""

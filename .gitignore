@@ -20,6 +20,7 @@ __pycache__
 backend/.rasa/
 
 #whatsapp
-server/.wwebjs_cache/
-server/.wwebjs_auth/
+whatsapp-bot/.wwebjs_cache/
+whatsapp-bot/.wwebjs_auth/
+whatsapp-bot/.wwebjs_auth
 session/
