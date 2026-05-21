@@ -1,4 +1,4 @@
-const qrcode = require("qrcode-terminal");
+const QRCode = require("qrcode");
 
 const axios = require("axios");
 
@@ -23,7 +23,7 @@ const client = new Client({
 
       "--disable-gpu",
 
-      "--single-process"
+      "--single-process",
     ],
   },
 });
@@ -32,13 +32,19 @@ const client = new Client({
 // QR LOGIN
 // =====================
 
-client.on("qr", (qr) => {
-  qrcode.generate(qr, {
-    small: true,
-  });
+client.on(
+  "qr",
 
-  console.log("Scan QR WhatsApp");
-});
+  async (qr) => {
+    console.log("QR received");
+
+    const url = await QRCode.toDataURL(qr);
+
+    console.log("Open this QR:");
+
+    console.log(url);
+  },
+);
 
 // =====================
 // READY
