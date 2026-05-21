@@ -65,19 +65,19 @@ const client = new Client({
 // QR LOGIN
 // =====================
 
+const QRCode = require("qrcode");
+
 client.on(
   "qr",
 
-  (qr) => {
-    qrcode.generate(
-      qr,
+  async (qr) => {
+    console.log("QR received");
 
-      {
-        small: true,
-      },
-    );
+    const url = await QRCode.toDataURL(qr);
 
-    console.log("Scan QR WhatsApp");
+    console.log("Open this QR:");
+
+    console.log(url);
   },
 );
 
