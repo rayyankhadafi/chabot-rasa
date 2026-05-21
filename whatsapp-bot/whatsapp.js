@@ -58,8 +58,6 @@ const client = new Client({
 
     executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
 
-    userDataDir: "/tmp/chrome-data",
-
     args: [
       "--no-sandbox",
 
