@@ -1,4 +1,6 @@
-const qrcode = require("qrcode-terminal");
+const QRCode = require("qrcode");
+
+const fs = require("fs");
 
 const axios = require("axios");
 
@@ -7,7 +9,7 @@ const express = require("express");
 const {Client, LocalAuth} = require("whatsapp-web.js");
 
 // =====================
-// EXPRESS HEALTH CHECK
+// EXPRESS
 // =====================
 
 const app = express();
@@ -18,7 +20,17 @@ app.get(
   "/",
 
   (req, res) => {
-    res.send("WhatsApp bot running");
+    res.send("WhatsApp Bot Running");
+  },
+);
+
+// buka QR di browser
+
+app.get(
+  "/qr",
+
+  (req, res) => {
+    res.sendFile(__dirname + "/qr.html");
   },
 );
 
@@ -31,12 +43,13 @@ app.listen(
 );
 
 // =====================
-// WHATSAPP CLIENT
+// WHATSAPP
 // =====================
 
 const client = new Client({
   authStrategy: new LocalAuth({
     clientId: "railway-bot-v2",
+
     dataPath: "/app/.wwebjs_auth",
   }),
 
@@ -64,24 +77,40 @@ const client = new Client({
 });
 
 // =====================
-// QR LOGIN
+// QR
 // =====================
-
-const fs = require("fs");
 
 client.on(
   "qr",
 
   async (qr) => {
-    const image = await QRCode.toDataURL(qr);
+    try {
+      const image = await QRCode.toDataURL(qr);
 
-    fs.writeFileSync(
-      "qr.html",
+      fs.writeFileSync(
+        "qr.html",
 
-      `<img src="${image}" />`,
-    );
+        `<html>
+          <body style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          background:#111;
+          ">
 
-    console.log("QR saved");
+          <img src="${image}" />
+
+          </body>
+        </html>`,
+      );
+
+      console.log("QR saved");
+
+      console.log("Open: /qr");
+    } catch (err) {
+      console.log(err.message);
+    }
   },
 );
 
@@ -98,7 +127,7 @@ client.on(
 );
 
 // =====================
-// AUTH SUCCESS
+// AUTH
 // =====================
 
 client.on(
@@ -109,10 +138,6 @@ client.on(
   },
 );
 
-// =====================
-// AUTH FAILED
-// =====================
-
 client.on(
   "auth_failure",
 
@@ -122,7 +147,7 @@ client.on(
 );
 
 // =====================
-// DISCONNECTED
+// DISCONNECT
 // =====================
 
 client.on(
@@ -133,8 +158,8 @@ client.on(
 
     try {
       await client.destroy();
-    } catch (err) {
-      console.log(err.message);
+    } catch (e) {
+      console.log(e.message);
     }
 
     setTimeout(() => {
@@ -166,21 +191,19 @@ client.on(
         },
       );
 
-      const rasaMessages = response.data;
-
-      for (const msg of rasaMessages) {
+      for (const msg of response.data) {
         if (msg.text) {
           await message.reply(msg.text);
         }
       }
-    } catch (error) {
-      console.log(error.message);
+    } catch (err) {
+      console.log(err.message);
     }
   },
 );
 
 // =====================
-// ERROR HANDLER
+// ERROR
 // =====================
 
 process.on(
