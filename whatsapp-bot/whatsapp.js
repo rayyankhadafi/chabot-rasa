@@ -167,38 +167,85 @@ client.on(
 );
 
 // =====================
+// DUPLICATE FILTER
+// =====================
+
+const processedMessages =
+new Set();
+
+// =====================
 // MESSAGE
 // =====================
 
-client.on(
-  "message",
+    client.on(
+    "message",
 
-  async (message) => {
-    try {
-      if (message.fromMe) {
-        return;
-      }
+    async(message)=>{
 
-      const response = await axios.post(
-        "https://chabot-rasa-production.up.railway.app/webhooks/rest/webhook",
+    try{
 
-        {
-          sender: message.from,
-
-          message: message.body,
-        },
-      );
-
-      for (const msg of response.data) {
-        if (msg.text) {
-          await message.reply(msg.text);
-        }
-      }
-    } catch (err) {
-      console.log(err.message);
+    // abaikan pesan bot sendiri
+    if(message.fromMe){
+      return;
     }
-  },
-);
+
+    // abaikan status
+    if(message.isStatus){
+      return;
+    }
+
+    // cegah pesan duplicate
+    const messageId =
+    message.id.id;
+
+    if(processedMessages.has(messageId)){
+      console.log(
+      "Duplicate ignored:",
+      message.body
+    );
+      return;
+    }
+      processedMessages.add(
+      messageId
+    );
+
+    // hapus cache setelah 1 menit
+      setTimeout(()=>{
+        processedMessages.delete(
+        messageId
+      );
+    },60000
+  );
+
+    console.log("Incoming:",message.body);
+
+    const response = await axios.post(
+    "https://chabot-rasa-production.up.railway.app/webhooks/rest/webhook",
+    {
+    sender:
+    message.from,
+
+    message:
+    message.body
+    });
+
+    for(const msg of response.data){
+
+    if(msg.text){
+      await message.reply(
+      msg.text
+    );
+    }
+    }
+
+    }catch(err){
+
+        console.log(
+        "Message Error:",
+        err.message
+      );
+    }
+  });
 
 // =====================
 // ERROR
