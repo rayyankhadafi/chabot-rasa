@@ -48,7 +48,7 @@ app.listen(
 
 const client = new Client({
   authStrategy: new LocalAuth({
-    clientId: "railway-bot-v2",
+    clientId: "priva-bot",
 
     dataPath: "/app/.wwebjs_auth",
   }),
@@ -223,5 +223,19 @@ process.on(
 // =====================
 // START
 // =====================
+
+process.on(
+  "SIGTERM",
+
+  async () => {
+    console.log("Closing...");
+
+    try {
+      await client.destroy();
+    } catch {}
+
+    process.exit(0);
+  },
+);
 
 client.initialize();
