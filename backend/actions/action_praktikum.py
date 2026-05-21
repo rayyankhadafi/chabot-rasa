@@ -453,7 +453,7 @@ class ActionHandlePraktikum(Action):
 
         if has_keyword(text, ["bayar", "membayar", "cara", "mengikuti",
                               "izin", "sakit", "tidak hadir", "musibah",
-                              "diperbaiki", "alfa", "inhal", "susulan"]):
+                              "diperbaiki", "alfa", "inhal", "susulan", "denda"]):
             dispatcher.utter_message(
                 text=clean_response(RESPONSES["inhal_cara"])
             )
