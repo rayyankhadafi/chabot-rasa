@@ -160,9 +160,11 @@ client.on(
       console.log(e.message);
     }
 
-    setTimeout(() => {
-      client.initialize();
-    }, 5000);
+    if (reason !== "LOGOUT") {
+      setTimeout(() => {
+        client.initialize();
+      }, 5000);
+    }
   },
 );
 
