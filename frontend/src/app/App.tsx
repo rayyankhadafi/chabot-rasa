@@ -168,7 +168,7 @@ const [chats, setChats] = useState<Chat[]>([
 
   const handleLogout = () => {
 
-    sessionStorage.clear;
+    sessionStorage.clear();
 
     setIsLoggedIn(false);
 
