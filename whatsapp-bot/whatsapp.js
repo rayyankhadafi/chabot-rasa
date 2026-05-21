@@ -24,53 +24,125 @@ const client = new Client({
   },
 });
 
+// =====================
+// QR LOGIN
+// =====================
+
 client.on("qr", (qr) => {
-  qrcode.generate(qr, {small: true});
+  qrcode.generate(qr, {
+    small: true,
+  });
 
   console.log("Scan QR WhatsApp");
 });
+
+// =====================
+// READY
+// =====================
 
 client.on("ready", () => {
   console.log("WhatsApp Bot Ready!");
 });
 
+// =====================
+// AUTH SUCCESS
+// =====================
+
 client.on("authenticated", () => {
   console.log("WhatsApp authenticated");
 });
+
+// =====================
+// AUTH FAILED
+// =====================
 
 client.on("auth_failure", (msg) => {
   console.log("Auth failed:", msg);
 });
 
-client.on("disconnected", (reason) => {
-  console.log("Disconnected:", reason);
-});
+// =====================
+// DISCONNECTED
+// =====================
 
-client.on("message", async (message) => {
-  try {
-    // abaikan pesan dari bot sendiri
-    if (message.fromMe) return;
+client.on(
+  "disconnected",
 
-    const response = await axios.post(
-      "https://chabot-rasa-production.up.railway.app/webhooks/rest/webhook",
+  async (reason) => {
+    console.log("Disconnected:", reason);
 
-      {
-        sender: message.from,
-
-        message: message.body,
-      },
-    );
-
-    const rasaMessages = response.data;
-
-    for (const msg of rasaMessages) {
-      if (msg.text) {
-        await message.reply(msg.text);
-      }
+    try {
+      await client.destroy();
+    } catch (err) {
+      console.log("Destroy error:", err.message);
     }
-  } catch (error) {
-    console.log("Error:", error.message);
-  }
-});
+
+    console.log("Reconnecting in 5s...");
+
+    setTimeout(() => {
+      client.initialize();
+    }, 5000);
+  },
+);
+
+// =====================
+// MESSAGE
+// =====================
+
+client.on(
+  "message",
+
+  async (message) => {
+    try {
+      // abaikan pesan bot sendiri
+      if (message.fromMe) {
+        return;
+      }
+
+      const response = await axios.post(
+        "https://chabot-rasa-production.up.railway.app/webhooks/rest/webhook",
+
+        {
+          sender: message.from,
+
+          message: message.body,
+        },
+      );
+
+      const rasaMessages = response.data;
+
+      for (const msg of rasaMessages) {
+        if (msg.text) {
+          await message.reply(msg.text);
+        }
+      }
+    } catch (error) {
+      console.log("Message Error:", error.message);
+    }
+  },
+);
+
+// =====================
+// GLOBAL ERROR
+// =====================
+
+process.on(
+  "unhandledRejection",
+
+  (error) => {
+    console.log("Unhandled:", error);
+  },
+);
+
+process.on(
+  "uncaughtException",
+
+  (error) => {
+    console.log("Exception:", error);
+  },
+);
+
+// =====================
+// START
+// =====================
 
 client.initialize();
