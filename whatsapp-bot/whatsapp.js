@@ -67,19 +67,21 @@ const client = new Client({
 // QR LOGIN
 // =====================
 
-const QRCode = require("qrcode");
+const fs = require("fs");
 
 client.on(
   "qr",
 
   async (qr) => {
-    console.log("QR received");
+    const image = await QRCode.toDataURL(qr);
 
-    const url = await QRCode.toDataURL(qr);
+    fs.writeFileSync(
+      "qr.html",
 
-    console.log("Open this QR:");
+      `<img src="${image}" />`,
+    );
 
-    console.log(url);
+    console.log("QR saved");
   },
 );
 
