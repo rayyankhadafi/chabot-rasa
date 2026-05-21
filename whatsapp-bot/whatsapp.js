@@ -36,7 +36,7 @@ app.listen(
 
 const client = new Client({
   authStrategy: new LocalAuth({
-    clientId: "railway-bot",
+    clientId: "railway-bot-v2",
     dataPath: "/app/.wwebjs_auth",
   }),
 
@@ -44,6 +44,8 @@ const client = new Client({
     headless: true,
 
     executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+
+    userDataDir: "/tmp/chrome-data",
 
     args: [
       "--no-sandbox",
