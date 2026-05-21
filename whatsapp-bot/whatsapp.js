@@ -36,9 +36,7 @@ app.listen(
 
 const client = new Client({
   authStrategy: new LocalAuth({
-    clientId: "railway-whatsapp",
-
-    dataPath: "/app/.wwebjs_auth",
+    clientId: "railway-bot",
   }),
 
   puppeteer: {
