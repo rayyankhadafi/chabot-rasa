@@ -582,7 +582,7 @@ class ActionHandlePraktikum(Action):
                 text=clean_response(RESPONSES["peralatan_modul"])
             )
 
-        elif has_keyword(text, ["kertas", "kertas tulis"]):
+        elif has_keyword(text, ["kertas"]):
             dispatcher.utter_message(
                 text=clean_response(RESPONSES["peralatan_tulis"])
             )
