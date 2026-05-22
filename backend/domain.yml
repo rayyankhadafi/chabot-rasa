@@ -28,8 +28,6 @@ intents:
   - tantangan_bot
   - mood_baik
   - mood_tidak_baik
-entities:
-  - topik
 actions:
   - action_handle_responsi
   - action_handle_praktikum

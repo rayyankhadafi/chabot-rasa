@@ -236,6 +236,14 @@ RESPONSES = {
         dibagikan secara digital oleh asisten praktikum.
     """).strip(),
 
+    "peralatan_tulis": dedent("""
+        Laboratorium biasanya tidak menyediakan kertas tulis untuk ujian teori atau post-test saat
+        praktikum berlangsung.
+
+        Mahasiswa dapat mengunduh template kertas laboratorium yang tersedia pada modul praktikum,
+        kemudian mencetaknya sendiri untuk dibawa saat praktikum.
+    """).strip(),
+
     "peralatan_default": dedent("""
         Perlengkapan yang dibutuhkan saat praktikum
         biasanya akan diinformasikan oleh asisten praktikum
@@ -325,10 +333,15 @@ RESPONSES = {
     """).strip(),
 
     "pendaftaran_syarat": dedent("""
-        Beberapa syarat mengikuti praktikum biasanya meliputi:
-        - Terdaftar pada mata kuliah praktikum
-        - Melakukan pendaftaran praktikum
-        - Sudah melakukan aktivasi pembayaran praktikum
+        Beberapa syarat untuk mengikuti praktikum biasanya meliputi:
+        - Terdaftar sebagai mahasiswa aktif
+        - Mengambil mata kuliah praktikum terkait pada KRS
+        - Melakukan pendaftaran praktikum melalui sistem laboratorium
+        - Sudah melakukan aktivasi atau pembayaran praktikum sesuai ketentuan
+        - Memilih jadwal atau slot praktikum yang tersedia
+
+        Pastikan seluruh proses pendaftaran dilakukan sesuai jadwal yang telah ditentukan oleh
+        laboratorium.
     """).strip(),
 
     "pendaftaran_slot": dedent("""
@@ -567,6 +580,11 @@ class ActionHandlePraktikum(Action):
         elif has_keyword(text, ["modul", "catatan"]):
             dispatcher.utter_message(
                 text=clean_response(RESPONSES["peralatan_modul"])
+            )
+
+        elif has_keyword(text, ["kertas", "kertas tulis"]):
+            dispatcher.utter_message(
+                text=clean_response(RESPONSES["peralatan_tulis"])
             )
 
         else:

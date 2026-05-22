@@ -26,9 +26,12 @@ RESPONSES = {
     # ================= NILAI =================
 
     "nilai_tidak_sesuai": dedent("""
-        Jika nilai responsi tidak sesuai, silakan hubungi asisten praktikum terkait.
-        Nantinya akan dilakukan pengecekan ulang, dan jika terjadi kesalahan input maka nilai
-        dapat diperbaiki.
+        Jika nilai responsi tidak sesuai atau terjadi kendala pada komputer laboratorium maupun
+        laptop saat responsi berlangsung, segera hubungi asisten praktikum terkait.
+
+        Nantinya, asisten praktikum akan melakukan pengecekan ulang, dan apabila ditemukan
+        kesalahan input atau masalah teknis lainnya, nilai dapat diperbaiki sesuai hasil
+        verifikasi.
     """).strip(),
 
     "nilai_perbaikan": dedent("""
@@ -198,8 +201,12 @@ RESPONSES = {
     # ================= SANKSI =================
 
     "sanksi_mencontek": dedent("""
-        Mahasiswa yang terbukti mencontek saat responsi
-        dapat dikenakan nilai 0 atau dinyatakan tidak lulus praktikum.
+        Mahasiswa yang terbukti melakukan kecurangan atau mencontek saat responsi
+        dapat dikenakan sanksi berupa nilai 0 atau dinyatakan tidak lulus praktikum.
+
+        Jika kamu melihat adanya tindakan kecurangan selama responsi, kamu dapat
+        melaporkannya kepada asisten praktikum, baik saat responsi berlangsung maupun
+        setelah responsi selesai.
     """).strip(),
 
     "sanksi_lapor": dedent("""
@@ -208,8 +215,14 @@ RESPONSES = {
     """).strip(),
 
     "sanksi_tanya_teman": dedent("""
-        Peserta diharapkan mengerjakan responsi secara mandiri
-        dan tidak bertanya kepada teman.
+        Peserta diharapkan mengerjakan responsi secara mandiri dan tidak bertanya atau
+        bekerja sama dengan teman selama responsi berlangsung.
+
+        Jika mahasiswa ketahuan bertanya kepada teman, asisten praktikum biasanya akan
+        memberikan peringatan terlebih dahulu.
+
+        Namun, apabila pelanggaran dilakukan berulang kali atau melebihi batas
+        peringatan yang diberikan, nilai responsi dapat dikurangi bahkan menjadi 0.
     """).strip(),
 
     "sanksi_ulang": dedent("""
@@ -218,8 +231,11 @@ RESPONSES = {
     """).strip(),
 
     "sanksi_telat": dedent("""
-        Mahasiswa biasanya tidak dikenakan denda,
-        namun tetap harus mengikuti aturan laboratorium.
+        Mahasiswa biasanya tidak dikenakan denda jika terlambat mengikuti responsi.
+
+        Namun, keterlambatan umumnya hanya ditoleransi maksimal 15 menit. Jika melebihi
+        batas tersebut, mahasiswa biasanya tidak diperbolehkan mengikuti responsi dan
+        dianggap tidak hadir.
     """).strip(),
 
     "sanksi_default": dedent("""
@@ -230,15 +246,25 @@ RESPONSES = {
     # ================= SUSULAN =================
 
     "susulan": dedent("""
-        Responsi susulan dapat diajukan
-        jika memiliki alasan yang sah dan disetujui laboratorium.
+        Responsi susulan biasanya dapat diajukan jika mahasiswa memiliki izin atau alasan
+        yang valid, seperti sakit, musibah, atau keperluan mendesak lainnya yang disetujui
+        oleh laboratorium.
+
+        Mahasiswa juga biasanya diminta menyiapkan bukti pendukung, seperti surat sakit atau
+        surat izin resmi, sebelum mengikuti responsi susulan.
+
+        Jika pengajuan disetujui, mahasiswa dapat mengikuti responsi susulan sesuai jadwal
+        yang ditentukan oleh asisten praktikum atau laboratorium.
     """).strip(),
 
     # ================= ATURAN =================
 
     "aturan_telat": dedent("""
-        Mahasiswa yang terlambat biasanya masih diberikan toleransi,
-        namun jika melewati batas maka dapat dianggap tidak hadir.
+        Mahasiswa yang terlambat mengikuti responsi biasanya masih diberikan toleransi
+        sekitar 15 menit.
+
+        Namun, jika melebihi batas toleransi tersebut, mahasiswa dapat dianggap tidak
+        hadir (alfa) dan tidak mendapatkan nilai responsi atau memperoleh nilai 0.
     """).strip(),
 
     "aturan_catatan": dedent("""
