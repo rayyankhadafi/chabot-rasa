@@ -48,7 +48,7 @@ app.listen(
 
 const client = new Client({
   authStrategy: new LocalAuth({
-    clientId: "priva-bot-v2",
+    clientId: "priva-bot-v3",
 
     dataPath: "/app/.wwebjs_auth",
   }),
