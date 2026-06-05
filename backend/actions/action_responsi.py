@@ -312,7 +312,9 @@ RESPONSES = {
 
     "default": dedent("""
         Maaf, saya belum memahami pertanyaan Anda.
-        Silakan gunakan pertanyaan yang lebih spesifik.
+
+        Silakan kunjungi website REGLAB TIF UAD atau hubungi asisten praktikum melalui
+        grup WhatsApp praktikum untuk mendapatkan informasi lebih lanjut.
     """).strip()
 }
 

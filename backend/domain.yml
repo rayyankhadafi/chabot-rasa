@@ -31,7 +31,7 @@ intents:
 actions:
   - action_handle_responsi
   - action_handle_praktikum
-  - action_handle_pendaftaran
+
 
 responses:
 

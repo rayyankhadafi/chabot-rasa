@@ -175,10 +175,6 @@ client.on(
 const processedMessages =
 new Set();
 
-// =====================
-// MESSAGE
-// =====================
-
     client.on(
     "message",
 
