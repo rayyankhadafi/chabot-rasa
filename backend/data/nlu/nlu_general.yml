@@ -64,20 +64,20 @@ nlu:
 # ======================= MENEGASKAN ======================
 # =========================================================
 
-- intent: menegaskan
-  examples: |
-    - ya
-    - iya
-    - benar
-    - betul
-    - tentu
-    - tentu saja
-    - ya benar
-    - benar sekali
-    - iya betul
-    - sepertinya benar
-    - saya setuju
-    - oke benar
+# - intent: menegaskan
+#   examples: |
+#     - ya
+#     - iya
+#     - benar
+#     - betul
+#     - tentu
+#     - tentu saja
+#     - ya benar
+#     - benar sekali
+#     - iya betul
+#     - sepertinya benar
+#     - saya setuju
+#     - oke benar
 
 # =========================================================
 # ======================= MEMBANTAH =======================

@@ -32,10 +32,10 @@ rules:
     - intent: tantangan_bot
     - action: utter_tantangan_bot
 
-- rule: user menegaskan
-  steps:
-    - intent: menegaskan
-    - action: utter_menegaskan
+# - rule: user menegaskan
+#   steps:
+#     - intent: menegaskan
+#     - action: utter_menegaskan
 
 - rule: user membantah
   steps:

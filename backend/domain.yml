@@ -23,7 +23,7 @@ intents:
   - menyapa
   - sampai_jumpa
   - terimakasih
-  - menegaskan
+  # - menegaskan
   - membantah
   - tantangan_bot
   - mood_baik
@@ -67,10 +67,10 @@ responses:
   # ======================= MENEGASKAN ======================
   # =========================================================
 
-  utter_menegaskan:
-    - text: "Baik 👍."
-    - text: "Oke, saya mengerti 😊."
-    - text: "Siap, terima kasih atas konfirmasinya."
+  # utter_menegaskan:
+  #   - text: "Baik 👍."
+  #   - text: "Oke, saya mengerti 😊."
+  #   - text: "Siap, terima kasih atas konfirmasinya."
 
   # =========================================================
   # ======================= MEMBANTAH =======================
