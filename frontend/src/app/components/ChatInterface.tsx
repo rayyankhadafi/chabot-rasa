@@ -34,6 +34,10 @@ interface ChatInterfaceProps {
   setChats: React.Dispatch<
     React.SetStateAction<Chat[]>
   >;
+
+    setActiveChatId: (
+    id: string
+  ) => void;
 }
 
 // =========================
@@ -43,7 +47,8 @@ interface ChatInterfaceProps {
 export function ChatInterface({
   messages,
   setChats,
-  activeChatId
+  activeChatId,
+  setActiveChatId
 }: ChatInterfaceProps) {
 
   const [input, setInput] = useState('');
@@ -91,6 +96,31 @@ export function ChatInterface({
 
     if (!messageText.trim()) return;
 
+    let currentChatId =
+    activeChatId;
+
+    if (!currentChatId) {
+      
+      const newChat: Chat = {
+        id: crypto.randomUUID(),
+        title: "Percakapan Baru",
+        timestamp: new Date(),
+        messages: []
+      };
+
+      setChats((prev) => [
+        newChat,
+        ...prev
+      ]);
+
+      setActiveChatId(
+        newChat.id
+      );
+
+      currentChatId =
+        newChat.id;
+    }
+
     // loading aktif lebih awal
     setIsLoading(true);
 
@@ -105,7 +135,7 @@ export function ChatInterface({
     // tampilkan pesan user
     setChats((prev) =>
       prev.map((chat) =>
-        chat.id === activeChatId
+        chat.id === currentChatId
           ? {
               ...chat,
               messages: [
@@ -166,7 +196,7 @@ export function ChatInterface({
 
         setChats((prev) =>
           prev.map((chat) =>
-            chat.id === activeChatId
+            chat.id === currentChatId
               ? {
                   ...chat,
                   messages: [
@@ -191,7 +221,7 @@ export function ChatInterface({
 
         setChats((prev) =>
           prev.map((chat) =>
-            chat.id === activeChatId
+            chat.id === currentChatId
               ? {
                   ...chat,
                   messages: [
@@ -218,7 +248,7 @@ export function ChatInterface({
 
       setChats((prev) =>
         prev.map((chat) =>
-          chat.id === activeChatId
+          chat.id === currentChatId
             ? {
                 ...chat,
                 messages: [

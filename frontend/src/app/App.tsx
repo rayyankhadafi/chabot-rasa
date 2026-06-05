@@ -243,6 +243,7 @@ const [chats, setChats] = useState<Chat[]>([
             messages={activeChat?.messages || []}
             setChats={setChats}
             activeChatId={activeChatId}
+            setActiveChatId={setActiveChatId}
           />
         </div>
 
