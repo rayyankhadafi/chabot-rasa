@@ -192,6 +192,8 @@ export function ChatSidebar({
           updatedChats[0].id
         );
 
+      }else {
+        setActiveChat("");
       }
     }
 
