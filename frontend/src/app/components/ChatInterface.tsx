@@ -103,7 +103,7 @@ export function ChatInterface({
       
       const newChat: Chat = {
         id: crypto.randomUUID(),
-        title: "Percakapan Baru",
+        title: "Chat Baru",
         timestamp: new Date(),
         messages: []
       };
