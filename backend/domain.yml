@@ -28,6 +28,7 @@ intents:
   - tantangan_bot
   - mood_baik
   - mood_tidak_baik
+  - nlu_fallback
 actions:
   - action_handle_responsi
   - action_handle_praktikum
@@ -112,7 +113,10 @@ responses:
   # =========================================================
 
   utter_default:
-    - text: "Maaf, saya belum memahami pertanyaan Anda. Silakan coba gunakan kata lain."
+    - text: | 
+        Maaf, saya belum memahami pertanyaan Anda.
+        Silakan kunjungi website REGLAB TIF UAD atau hubungi asisten praktikum melalui
+        grup WhatsApp praktikum untuk mendapatkan informasi lebih lanjut.
 
 session_config:
   session_expiration_time: 60
