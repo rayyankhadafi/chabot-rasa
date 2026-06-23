@@ -172,78 +172,61 @@ client.on(
 // DUPLICATE FILTER
 // =====================
 
-const processedMessages =
-new Set();
+const processedMessages = new Set();
 
-    client.on(
-    "message",
+client.on(
+  "message",
 
-    async(message)=>{
+  async (message) => {
+    try {
+      // abaikan pesan bot sendiri
+      if (message.fromMe) {
+        return;
+      }
 
-    try{
+      // abaikan status
+      if (message.isStatus) {
+        return;
+      }
 
-    // abaikan pesan bot sendiri
-    if(message.fromMe){
-      return;
-    }
+      // cegah pesan duplicate
+      const messageId = message.id.id;
 
-    // abaikan status
-    if(message.isStatus){
-      return;
-    }
+      if (processedMessages.has(messageId)) {
+        console.log("Duplicate ignored:", message.body);
+        return;
+      }
+      processedMessages.add(messageId);
 
-    // cegah pesan duplicate
-    const messageId =
-    message.id.id;
+      // hapus cache setelah 1 menit
+      setTimeout(() => {
+        processedMessages.delete(messageId);
+      }, 60000);
 
-    if(processedMessages.has(messageId)){
-      console.log(
-      "Duplicate ignored:",
-      message.body
-    );
-      return;
-    }
-      processedMessages.add(
-      messageId
-    );
+      console.log("Incoming:", message.body);
 
-    // hapus cache setelah 1 menit
-      setTimeout(()=>{
-        processedMessages.delete(
-        messageId
+      const response = await axios.post(
+        "https://chabot-rasa-production.up.railway.app/webhooks/rest/webhook",
+        {
+          sender: message.from,
+
+          message: message.body,
+        },
       );
-    },60000
-  );
 
-    console.log("Incoming:",message.body);
+      const combinedText = response.data
+        .map((msg) => msg.text)
+        .filter(Boolean)
+        .join("\n\n");
 
-    const response = await axios.post(
-    "https://chabot-rasa-production.up.railway.app/webhooks/rest/webhook",
-    {
-    sender:
-    message.from,
-
-    message:
-    message.body
-    });
-
-    for(const msg of response.data){
-
-    if(msg.text){
-      await message.reply(
-      msg.text
-    );
+      if (combinedText) {
+        await message.reply(combinedText);
+      }
+    } catch (err) {
+      console.log("Message Error:", err.message);
     }
-    }
-
-    }catch(err){
-
-        console.log(
-        "Message Error:",
-        err.message
-      );
-    }
-  });
+  },
+);
 
 // =====================
 // ERROR
