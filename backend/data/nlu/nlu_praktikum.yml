@@ -15,6 +15,14 @@ nlu:
     - Jika absensi praktikum melebihi batas apakah masih bisa diperbaiki?
     - Bagaimana jika saya tidak hadir karena lupa praktikum?
     - Jika tidak hadir praktikum sampai melebihi batas hadir apa konsekuensinya?
+    - Apa prosedur untuk mengikuti inhal praktikum?
+    - Bagaimana alur pengajuan inhal praktikum?
+    - Jika absen praktikum melewati ketentuan apakah harus inhal?
+    - Apakah pembayaran inhal dilakukan sebelum mengikuti praktikum pengganti?
+    - Saya ingin mengurus inhal karena tidak masuk praktikum
+    - Bagaimana ketentuan inhal untuk mahasiswa yang tidak hadir praktikum?
+    - Kalau jumlah absen praktikum terlalu banyak apakah ada inhal?
+    - Apakah inhal praktikum bisa diajukan setelah jadwal utama selesai?
 
 # =========================
 # JADWAL PRAKTIKUM
@@ -30,6 +38,11 @@ nlu:
     - Bagaimana jika jadwal praktikum bentrok dengan kuliah?
     - Jadwal praktikum bisa dilihat dimana?
     - Kapan praktikum dimulai?
+    - Praktikum semester ini dimulai kapan?
+    - Tanggal mulai praktikum diumumkan di mana?
+    - Jadwal awal praktikum dapat dilihat lewat apa?
+    - Kapan pertemuan pertama praktikum dilaksanakan?
+    - Apakah informasi mulai praktikum sudah tersedia?
 
 # =========================
 # ATURAN PRAKTIKUM
@@ -64,6 +77,11 @@ nlu:
     - Apakah boleh telat praktikum?
     - Apakah ada batas waktu telat ketika praktikum?
     - Jika telat apakah dihitung alfa?
+    - Apakah absensi praktikum menentukan kelulusan praktikum?
+    - Jika kehadiran praktikum kurang apakah ada pengaruhnya?
+    - Apakah jumlah hadir praktikum mempengaruhi status praktikan?
+    - Bagaimana dampak absen praktikum terhadap penilaian?
+    - Apakah daftar hadir praktikum diperhitungkan?
 
 # =========================
 # NILAI PRAKTIKUM
@@ -79,6 +97,11 @@ nlu:
     - Apakah nilai praktikum mempengaruhi nilai responsi?
     - Jika nilai praktikum salah bagaimana?
     - Apakah nilai praktikum bisa direvisi?
+    - Bagaimana jika nilai akhir praktikum tidak sesuai?
+    - Apakah komponen nilai praktikum bisa ditanyakan ulang?
+    - Kalau ada kesalahan input nilai praktikum harus bagaimana?
+    - Apakah nilai praktikum menentukan nilai akhir mata kuliah?
+    - Bagaimana cara mengetahui bobot nilai praktikum?
 
 # =========================
 # PERALATAN PRAKTIKUM
@@ -92,6 +115,14 @@ nlu:
     - Apakah boleh membawa catatan praktikum?
     - Praktikum harus membawa laptop sendiri?
     - Apakah lab menyediakan kertas tulis praktikum?
+    - Apa perlengkapan yang wajib dibawa praktikan?
+    - Saat praktikum harus membawa alat tulis sendiri?
+    - Apakah perlengkapan praktikum disediakan oleh laboratorium?
+    - Apakah praktikan perlu menyiapkan kertas sendiri?
+    - Barang pendukung apa yang perlu dibawa ke lab?
+    - Apakah modul, laptop, dan alat tulis harus dibawa?
+    - Apakah catatan praktikum termasuk perlengkapan yang boleh dibawa?
+    - Kalau tidak membawa modul praktikum apakah bermasalah?
 
 # =========================
 # ONLINE PRAKTIKUM
@@ -105,6 +136,11 @@ nlu:
     - Bagaimana solusi jika internet bermasalah pada praktikum?
     - Praktikum online menggunakan apa?
     - Apakah praktikum boleh menggunakan ChatGPT?
+    - Apakah praktikum dilaksanakan daring atau luring?
+    - Praktikum harus datang ke lab atau bisa online?
+    - Apakah ada opsi praktikum jarak jauh?
+    - Bagaimana ketentuan hadir untuk praktikum online?
+    - Jika praktikum online apakah tetap wajib absen?
 
 # =========================
 # PENDAFTARAN PRAKTIKUM
@@ -145,6 +181,11 @@ nlu:
     - Apakah boleh meminjam alat laboratorium?
     - Bagaimana aturan peminjaman alat lab?
     - Siapa yang bertanggung jawab jika alat rusak?
+    - Bagaimana cara menggunakan fasilitas lab di luar jam praktikum?
+    - Apakah alat laboratorium boleh dipakai untuk keperluan tugas?
+    - Jika ingin memakai lab tambahan harus izin ke siapa?
+    - Bagaimana prosedur pemakaian alat lab selain jadwal kelas?
+    - Apakah fasilitas laboratorium bisa dipinjam mahasiswa?
 
 # =========================
 # KELULUSAN PRAKTIKUM
@@ -157,3 +198,8 @@ nlu:
     - Bagaimana syarat lulus praktikum?
     - Apakah nilai praktikum terpisah dari matkul?
     - Apakah bisa mengulang praktikum?
+    - Apa saja ketentuan agar praktikum dinyatakan lulus?
+    - Jika nilai mata kuliah tidak lulus apakah status praktikum tetap berlaku?
+    - Apakah kelulusan praktikum dihitung sendiri dari teori?
+    - Kalau gagal praktikum apakah harus mengambil ulang?
+    - Apakah praktikum punya syarat kelulusan tersendiri?

@@ -19,6 +19,10 @@ __pycache__
 # Rasa
 backend/.rasa/
 
+# Test accuration
+test_nlu.yml
+results/
+
 #whatsapp
 whatsapp-bot/.wwebjs_cache/
 whatsapp-bot/.wwebjs_auth/

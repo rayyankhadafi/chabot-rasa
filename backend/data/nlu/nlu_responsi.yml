@@ -147,6 +147,14 @@ nlu:
     - apakah boleh izin tidak hadir responsi?
     - kehadiran minimal responsi berapa?
     - apakah responsi termasuk wajib hadir?
+    - Bagaimana prosedur izin jika tidak bisa hadir responsi?
+    - Kalau sakit pada hari responsi harus melapor ke siapa?
+    - Apakah ketidakhadiran responsi perlu surat keterangan?
+    - Jika berhalangan hadir responsi apa yang harus dilakukan?
+    - Apakah absen saat responsi mempengaruhi nilai responsi?
+    - Bagaimana aturan kehadiran untuk peserta responsi?
+    - Kalau tidak datang responsi karena sakit apakah masih bisa diproses?
+    - Apakah mahasiswa wajib hadir langsung saat responsi?
 
 # =========================
 # SANKSI RESPONSI
@@ -173,6 +181,11 @@ nlu:
     - jika melanggar tata tertib responsi apa akibatnya?
     - apakah bisa mendapat pengurangan nilai?
     - apa konsekuensi kecurangan saat responsi?
+    - Apa sanksi jika melakukan pelanggaran saat responsi?
+    - Apakah kecurangan saat responsi membuat peserta gagal?
+    - Jika peserta melanggar aturan responsi apakah nilainya dikurangi?
+    - Apa akibat jika membuka materi yang dilarang saat responsi?
+    - Apakah pelanggaran responsi dapat menyebabkan diskualifikasi?
 
 # =========================
 # SUSULAN RESPONSI
@@ -230,3 +243,8 @@ nlu:
     - apakah boleh meminjam alat teman saat responsi?
     - aturan masuk labor saat responsi bagaimana?
     - apakah boleh membawa hp ke dalam labor?
+    - Apa saja ketentuan yang harus dipatuhi saat responsi?
+    - Apakah peserta boleh meninggalkan ruangan ketika responsi berlangsung?
+    - Benda apa saja yang wajib disimpan sebelum responsi?
+    - Apakah catatan pribadi diperbolehkan masuk ruang responsi?
+    - Bagaimana tata tertib penggunaan perangkat saat responsi?
