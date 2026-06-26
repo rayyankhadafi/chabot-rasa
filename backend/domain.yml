@@ -116,32 +116,32 @@ responses:
     - text: | 
         Maaf, saya belum memahami pertanyaan Anda.
 
-        Silakan coba gunakan kosakata atau kalimat lain yang berkaitan dengan layanan Laboratorium
-        Informatika.
+        Coba gunakan kata kunci atau kalimat lain yang berkaitan dengan layanan
+        Laboratorium Informatika.
 
-        Contoh:
-        -inhal praktikum
-        -jadwal praktikum
-        -aturan praktikum
-        -kehadiran praktikum
-        -nilai praktikum
-        -peralatan praktikum
-        -online praktikum
-        -pendaftaran praktikum
-        -peminjaman lab
-        -kelulusan praktikum
-        -pengertian responsi
-        -biaya responsi
-        -nilai responsi
-        -jadwal responsi
-        -mekanisme responsi
-        -kehadiran responsi
-        -sanksi responsi
-        -susulan responsi
-        -aturan responsi
+        Anda dapat menanyakan, misalnya:
+        -"inhal praktikum"
+        -"jadwal praktikum"
+        -"aturan praktikum"
+        -"kehadiran praktikum"
+        -"nilai praktikum"
+        -"peralatan praktikum"
+        -"online praktikum"
+        -"pendaftaran praktikum"
+        -"peminjaman lab"
+        -"kelulusan praktikum"
+        -"pengertian responsi"
+        -"biaya responsi"
+        -"nilai responsi"
+        -"jadwal responsi"
+        -"mekanisme responsi"
+        -"kehadiran responsi"
+        -"sanksi responsi"
+        -"susulan responsi"
+        -"aturan responsi"
 
-        Silakan kunjungi website REGLAB TIF UAD atau hubungi asisten praktikum melalui
-        grup WhatsApp praktikum untuk mendapatkan informasi lebih lanjut.
+        Apabila informasi yang Anda butuhkan belum tersedia, silakan kunjungi website REGLAB TIF UAD atau hubungi asisten
+        praktikum melalui grup WhatsApp praktikum untuk memperoleh informasi lebih lanjut.
 
 session_config:
   session_expiration_time: 60
