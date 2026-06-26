@@ -447,6 +447,30 @@ RESPONSES = {
     "default": dedent("""
         Maaf, saya belum memahami pertanyaan Anda.
 
+        Silakan coba gunakan kosakata atau kalimat lain yang berkaitan dengan layanan Laboratorium
+        Informatika.
+
+        Contoh:
+        -inhal praktikum
+        -jadwal praktikum
+        -aturan praktikum
+        -kehadiran praktikum
+        -nilai praktikum
+        -peralatan praktikum
+        -online praktikum
+        -pendaftaran praktikum
+        -peminjaman lab
+        -kelulusan praktikum
+        -pengertian responsi
+        -biaya responsi
+        -nilai responsi
+        -jadwal responsi
+        -mekanisme responsi
+        -kehadiran responsi
+        -sanksi responsi
+        -susulan responsi
+        -aturan responsi
+
         Silakan kunjungi website REGLAB TIF UAD atau hubungi asisten praktikum melalui
         grup WhatsApp praktikum untuk mendapatkan informasi lebih lanjut.
     """).strip()
