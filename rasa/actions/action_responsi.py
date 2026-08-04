@@ -1,20 +1,13 @@
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
-import textwrap
 from textwrap import dedent
+# pyrefly: ignore [missing-import]
+from rasa_sdk import Action, Tracker
+# pyrefly: ignore [missing-import]
+from rasa_sdk.executor import CollectingDispatcher
 
+# pyrefly: ignore [missing-import]
+from actions.helpers import clean_response, has_keyword
 
-# =========================================================
-# ===================== HELPER ============================
-# =========================================================
-
-def clean_response(text: str) -> str:
-    return textwrap.dedent(text).strip()
-
-
-def has_keyword(text: str, keywords: list) -> bool:
-    return any(keyword in text for keyword in keywords)
 
 
 # =========================================================

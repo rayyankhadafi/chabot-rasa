@@ -1,0 +1,7 @@
+node_modules
+.wwebjs_auth
+qr.html
+.env
+.git
+.gitignore
+README.md

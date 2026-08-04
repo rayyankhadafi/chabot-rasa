@@ -12,14 +12,16 @@ const verifyToken = (req, res, next) => {
 
     const token = authHeader.split(" ")[1];
 
-    const decoded = jwt.verify(
-      token,
+    if (!token) {
+      return res.status(401).json({
+        message: "Token tidak tersedia",
+      });
+    }
 
-      "chatbot_secret_key",
-    );
+    const jwtSecret = process.env.JWT_SECRET || "chatbot_secret_key";
+    const decoded = jwt.verify(token, jwtSecret);
 
     req.user = decoded;
-
     next();
   } catch (error) {
     return res.status(403).json({
