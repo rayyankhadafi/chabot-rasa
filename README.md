@@ -4,7 +4,7 @@ PRIVA adalah sistem chatbot asisten virtual cerdas yang dikembangkan untuk memba
 
 ---
 
-## 🌟 Arsitektur Sistem & Tech Stack
+## Arsitektur Sistem & Tech Stack
 
 Sistem terdiri dari 4 modul utama yang saling terintegrasi:
 
@@ -17,13 +17,13 @@ Sistem terdiri dari 4 modul utama yang saling terintegrasi:
 ```
 
 1. **`frontend/`**: Antarmuka web pengguna berbasis React 18, Vite, Tailwind CSS, Lucide Icons, dan Sonner Toast.
-2. **`backend/`**: Service REST API untuk Autentikasi Pengguna (Register & Login) berbasis Express.js, JWT, Bcrypt, dan MySQL Cloud (Aiven).
-3. **`rasa/`**: Server Natural Language Understanding (NLU) & Dialogue Engine berbasis Rasa 3.6.21 dengan Custom Actions Python. Akurasi pengujian NLU mencapai **97.44%**.
+2. **`backend/`**: Service REST API untuk Autentikasi Pengguna (Register & Login) berbasis Express.js, JWT, Bcrypt, dan MySQL.
+3. **`rasa/`**: Server Natural Language Understanding (NLU) & Dialogue Engine berbasis Rasa 3.6.21 dengan Custom Actions Python.
 4. **`whatsapp-bot/`**: Bot WhatsApp terintegrasi yang menjembatani pesan WhatsApp ke Server Rasa berbasis `whatsapp-web.js`, Puppeteer, dan Express QR Web Viewer.
 
 ---
 
-## 🛠️ Pengembangan Lokal (Local Development)
+## Pengembangan Lokal
 
 ### 1. Jalankan Backend
 ```bash
