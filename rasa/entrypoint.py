@@ -44,7 +44,8 @@ class ProxyHandler(BaseHTTPRequestHandler):
 
         req = urllib.request.Request(url, data=body, headers=headers, method=method)
         try:
-            with urllib.request.urlopen(req, timeout=15) as resp:
+            # Use short 2s timeout so proxy responds immediately to Render load balancer
+            with urllib.request.urlopen(req, timeout=2) as resp:
                 self.send_response(resp.status)
                 for k, v in resp.headers.items():
                     if k.lower() not in ['transfer-encoding', 'content-length']:
@@ -63,7 +64,7 @@ class ProxyHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(content)
         except Exception:
-            # Return status loading quickly if Rasa model is still initializing
+            # Fast fallback while Rasa model is initializing
             msg = b'{"message": "Rasa API is initializing model in background...", "status": "loading"}'
             self.send_response(503)
             self.send_header("Content-Type", "application/json")
