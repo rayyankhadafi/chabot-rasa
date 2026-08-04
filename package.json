@@ -1,7 +1,0 @@
-{
-	"dependencies": {
-		"embla-carousel-react": "^8.6.0",
-		"react-day-picker": "^8.10.1",
-		"recharts": "^3.8.1"
-	}
-}
