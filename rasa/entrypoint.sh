@@ -12,14 +12,13 @@ export NUMEXPR_NUM_THREADS=1
 PORT_TO_USE=${PORT:-5005}
 CORS_TO_USE=${CORS_ORIGIN:-"*"}
 
-# 1. Start Rasa API Server FIRST so Render binds public domain to $PORT_TO_USE (e.g. 10000)
-echo "[Rasa Docker] Starting Rasa API Server on port $PORT_TO_USE (CORS: $CORS_TO_USE)..."
-rasa run --enable-api --cors "$CORS_TO_USE" --port "$PORT_TO_USE" &
-API_PID=$!
+# 1. Start Rasa Action Server PRIVATELY on 127.0.0.1:5055 (SANIC_HOST ensures Render scanner ignores port 5055)
+echo "[Rasa Docker] Starting Rasa Action Server internally on 127.0.0.1:5055..."
+SANIC_HOST=127.0.0.1 rasa run actions --port 5055 &
 
-# 2. Start Rasa Action Server in background for internal custom action calls
-echo "[Rasa Docker] Starting Rasa Action Server on port 5055..."
-rasa run actions --port 5055 &
+# Wait for action server to initialize
+sleep 3
 
-# Keep script running and wait for main API process
-wait $API_PID
+# 2. Start Rasa API Server PUBLICLY on 0.0.0.0:$PORT_TO_USE so Render binds external domain to main Rasa API
+echo "[Rasa Docker] Starting Rasa API Server publicly on 0.0.0.0:$PORT_TO_USE (CORS: $CORS_TO_USE)..."
+exec rasa run --enable-api --cors "$CORS_TO_USE" --port "$PORT_TO_USE"
