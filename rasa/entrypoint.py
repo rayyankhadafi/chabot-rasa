@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 import time
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 import urllib.request
 import urllib.error
 
@@ -44,7 +44,7 @@ class ProxyHandler(BaseHTTPRequestHandler):
 
         req = urllib.request.Request(url, data=body, headers=headers, method=method)
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=15) as resp:
                 self.send_response(resp.status)
                 for k, v in resp.headers.items():
                     if k.lower() not in ['transfer-encoding', 'content-length']:
@@ -63,7 +63,7 @@ class ProxyHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(content)
         except Exception:
-            # If Rasa model is still initializing
+            # Return status loading quickly if Rasa model is still initializing
             msg = b'{"message": "Rasa API is initializing model in background...", "status": "loading"}'
             self.send_response(503)
             self.send_header("Content-Type", "application/json")
@@ -92,9 +92,9 @@ def main():
         "--endpoints", "endpoints.yml"
     ])
 
-    # 3. Listen on 0.0.0.0:$LISTEN_PORT immediately for Render
-    server = HTTPServer(('0.0.0.0', LISTEN_PORT), ProxyHandler)
-    print(f"[Rasa Proxy] Listening on port {LISTEN_PORT} - Render Port Scan PASSED!", flush=True)
+    # 3. Use ThreadingHTTPServer so Render requests are never blocked
+    server = ThreadingHTTPServer(('0.0.0.0', LISTEN_PORT), ProxyHandler)
+    print(f"[Rasa Proxy] Multi-threaded proxy active on port {LISTEN_PORT} - Render Port Scan PASSED!", flush=True)
     server.serve_forever()
 
 if __name__ == "__main__":
