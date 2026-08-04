@@ -17,10 +17,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copy source code and pre-trained models
 COPY . .
 
-# Ensure entrypoint script is executable
-RUN chmod +x /app/entrypoint.sh
-
 # Inform Render that Port 10000 is the main public HTTP API port
 EXPOSE 10000
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["python3", "entrypoint.py"]
