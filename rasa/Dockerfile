@@ -20,6 +20,7 @@ COPY . .
 # Ensure entrypoint script is executable
 RUN chmod +x /app/entrypoint.sh
 
+# Inform Docker/Render that Port 5005 is the main exposed port
 EXPOSE 5005
 
 ENTRYPOINT ["/app/entrypoint.sh"]
