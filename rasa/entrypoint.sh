@@ -8,6 +8,7 @@ rasa run actions --port 5055 &
 sleep 4
 
 PORT_TO_USE=${PORT:-5005}
+CORS_TO_USE=${CORS_ORIGIN:-"*"}
 
-echo "[Rasa Docker] Starting Rasa API Server on port $PORT_TO_USE..."
-exec rasa run --enable-api --cors "*" --port "$PORT_TO_USE"
+echo "[Rasa Docker] Starting Rasa API Server on port $PORT_TO_USE (CORS: $CORS_TO_USE)..."
+exec rasa run --enable-api --cors "$CORS_TO_USE" --port "$PORT_TO_USE"
